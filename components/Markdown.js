@@ -3,7 +3,8 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import PropTypes from "prop-types";
 import AnchorHeader from "./AnchorHeader";
-import Schedule from "./Schedule";
+import ConnectedSchedule from "./ConnectedSchedule";
+import ConnectedImage from "./ConnectedImage";
 
 const Tip = ({ text }) => (
   <blockquote className="tip">
@@ -36,16 +37,21 @@ const renderers = {
     const height = srcParts[2] || "";
     const className = srcParts[3] || "";
 
+    let remoteSrc;
     if (src.startsWith("@react-finland/")) {
-      src = src.split("@react-finland/content-2018/images/")[1];
+      remoteSrc = src.split("@react-finland/content-2018/images/")[1];
+    } else if (src.startsWith("@@content/")) {
+      remoteSrc = src.split("@@content/")[1];
+    }
 
+    if (remoteSrc) {
       return (
-        <img
+        <ConnectedImage
           alt={alt}
           width={width}
           height={height}
           className={className}
-          src={require(`@react-finland/content-2018/images/${src}`)}
+          src={remoteSrc}
         />
       );
     }
@@ -78,17 +84,17 @@ const renderers = {
     // Example: {schedule:@react-finland/content-2018/schedules/25-04-2018}
     if (/\{schedule:[a-zA-Z@/\-0-9]*\}/.test(text)) {
       const importPath = text.slice(0, -1).split(":")[1];
-      const scheduleName = importPath.split(
-        "@react-finland/content-2018/src/schedules/"
-      )[1];
+      let scheduleName;
+      if (importPath.startsWith("@react-finland/content-2018/src/schedules/")) {
+        const [day, month, year] = importPath
+          .split("@react-finland/content-2018/src/schedules/")[1]
+          .split("-");
+        scheduleName = `${year}-${month}-${day}`;
+      } else {
+        scheduleName = importPath;
+      }
 
-      // XXXXX: Bad coupling. Fetch through GraphQL instead.
-      return (
-        <Schedule
-          key={scheduleName}
-          items={require(`@react-finland/content-2018/src/schedules/${scheduleName}`)}
-        />
-      );
+      return <ConnectedSchedule key={scheduleName} day={scheduleName} />;
     }
 
     return <p>{children}</p>;

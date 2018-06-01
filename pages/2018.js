@@ -14,9 +14,9 @@ PageFor2018.propTypes = {
 };
 
 export default connect(`
-{
-  page(id: "2018") {
-    main
+  query PageQuery($conferenceId: ID!) {
+    page(conferenceId: $conferenceId, id: "2018") {
+      main
+    }
   }
-}
 `)(PageFor2018);

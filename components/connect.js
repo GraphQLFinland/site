@@ -2,7 +2,7 @@ import React from "react";
 import { request } from "graphql-request";
 import config from "config";
 
-function connect(query) {
+function connect(query, propsToVars) {
   return component => {
     let queryCache = {};
 
@@ -22,7 +22,16 @@ function connect(query) {
         });
       }
       fetchData() {
-        return request(config.apiUrl, query).then(data => {
+        let variables = {
+          conferenceId: config.conferenceId,
+        };
+        if (propsToVars) {
+          variables = {
+            ...variables,
+            ...propsToVars(this.props),
+          };
+        }
+        return request(config.apiUrl, query, variables).then(data => {
           queryCache = data;
 
           return { data };

@@ -5,7 +5,7 @@ import Markdown from "./Markdown";
 import Keywords from "./Keywords";
 import SessionSpeakers from "./SessionSpeakers";
 
-const Schedule = ({ items: { intervals } }) => (
+const Schedule = ({ items: { intervals = [] } = {} }) => (
   <dl className="schedule">
     {intervals.map(({ begin, end, sessions }, i) => [
       <dt key={`dt-${i}`}>

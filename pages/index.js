@@ -7,7 +7,7 @@ import {
   connect,
 } from "components";
 
-const Index = ({ page = {}, speakers }) => (
+const Index = ({ page = {}, conference: { speakers = [] } = {} }) => (
   <>
     <section className="intro intro_home">
       <div className="intro--main">
@@ -29,12 +29,23 @@ const Index = ({ page = {}, speakers }) => (
 );
 
 export default connect(`
-{
-  speakers {
-    name, about, social { homepage, github, twitter, linkedin }, image
+  query PageQuery($conferenceId: ID!) {
+    conference(id: $conferenceId) {
+      speakers {
+        name
+        about
+        social {
+          homepage
+          github
+          twitter
+          linkedin
+        }
+        image
+      }
+    }
+    page(conferenceId: $conferenceId, id: "index") {
+      intro
+      secondary
+    }
   }
-  page(id: "index") {
-    intro, secondary
-  }
-}
 `)(Index);

@@ -14,9 +14,9 @@ PrivacyPolicy.propTypes = {
 };
 
 export default connect(`
-{
-  page(id: "privacy-policy") {
-    main
+  query PageQuery($conferenceId: ID!) {
+    page(conferenceId: $conferenceId, id: "privacy-policy") {
+      main
+    }
   }
-}
 `)(PrivacyPolicy);

@@ -14,9 +14,9 @@ Imprint.propTypes = {
 };
 
 export default connect(`
-{
-  page(id: "imprint") {
-    main
+  query PageQuery($conferenceId: ID!) {
+    page(conferenceId: $conferenceId, id: "imprint") {
+      main
+    }
   }
-}
 `)(Imprint);

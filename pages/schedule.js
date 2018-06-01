@@ -16,9 +16,10 @@ const Schedule = ({ page = {} }) => (
 );
 
 export default connect(`
-{
-  page(id: "schedule") {
-    intro, main
+  query PageQuery($conferenceId: ID!) {
+    page(conferenceId: $conferenceId, id: "schedule") {
+      intro
+      main
+    }
   }
-}
 `)(Schedule);

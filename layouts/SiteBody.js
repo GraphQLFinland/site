@@ -29,10 +29,12 @@ const SiteBody = (
     page: {
       file: { title, description, keywords },
     },
-    partners = [],
-    goldSponsors = [],
-    silverSponsors = [],
-    bronzeSponsors = [],
+    conference: {
+      partners = [],
+      goldSponsors = [],
+      silverSponsors = [],
+      bronzeSponsors = [],
+    } = {},
   },
   { router }
 ) => (
@@ -117,14 +119,36 @@ SiteBody.propTypes = {
   bronzeSponsors: PropTypes.array,
 };
 
-const sponsorQuery = `{ name, social { homepage }, about, image }`;
+const sponsorFragment = `
+  fragment SponsorFragment on Contact {
+    name
+    social {
+      homepage
+    }
+    about
+    image
+  }
+`;
+
 export default hot(module)(
   connect(`
-{
-  partners ${sponsorQuery},
-  goldSponsors ${sponsorQuery},
-  silverSponsors ${sponsorQuery},
-  bronzeSponsors ${sponsorQuery},
-}
-`)(SiteBody)
+    query RootQuery($conferenceId: ID!) {
+      conference(id: $conferenceId) {
+        partners {
+          ...SponsorFragment
+        }
+        goldSponsors {
+          ...SponsorFragment
+        }
+        silverSponsors {
+          ...SponsorFragment
+        }
+        bronzeSponsors {
+          ...SponsorFragment
+        }
+      }
+    }
+
+    ${sponsorFragment}
+  `)(SiteBody)
 );

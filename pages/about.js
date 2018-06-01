@@ -7,7 +7,7 @@ import {
   connect,
 } from "components";
 
-const About = ({ page = {}, organizers }) => (
+const About = ({ page = {}, conference: { organizers = [] } } = {}) => (
   <>
     <section className="intro intro_about">
       <div className="intro--main">
@@ -42,12 +42,16 @@ const About = ({ page = {}, organizers }) => (
 );
 
 export default connect(`
-{
-  organizers {
-    name, image, about
-  },
-  page(id: "about") {
-    intro
+  query PageQuery($conferenceId: ID!) {
+    conference(id: $conferenceId) {
+      organizers {
+        name
+        image
+        about
+      }
+    }
+    page(conferenceId: $conferenceId, id: "about") {
+      intro
+    }
   }
-}
 `)(About);

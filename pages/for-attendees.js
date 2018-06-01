@@ -46,9 +46,11 @@ const ForAttendees = ({ page = {} }) => (
 );
 
 export default connect(`
-{
-  page(id: "for-attendees") {
-    intro, secondary, main
+  query PageQuery($conferenceId: ID!) {
+    page(conferenceId: $conferenceId, id: "for-attendees") {
+      intro
+      secondary
+      main
+    }
   }
-}
 `)(ForAttendees);
