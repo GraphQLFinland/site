@@ -19,7 +19,7 @@ const About = ({ page = {}, organizers }) => (
     <AnchorHeader level={2}>The Organizers</AnchorHeader>
     <div className="grid--5col">
       <p>
-        React Finland is organized as a community effort. All of us are
+        GraphQL Finland is organized as a community effort. All of us are
         developers and this shows in the conference.
       </p>
     </div>

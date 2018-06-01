@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+// TODO: Generalize the component
+// TODO: Update the form action to match GraphQL mailing list
 const Subscribe = ({
-  children = "Subscribe to get React Finland related news to your mail.",
+  children = "Subscribe to get GraphQL Finland related news to your mail.",
 }) => {
   return (
     <section className="subscribe">
@@ -10,7 +12,7 @@ const Subscribe = ({
         <h2 className="subscribe--header">{children}</h2>
 
         <form
-          action="//react-finland.us16.list-manage.com/subscribe/post?u=a940d62db3f360204bf40b1c4&amp;amp;id=8c82fd10b8"
+          action="TODO"
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"

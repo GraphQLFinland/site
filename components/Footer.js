@@ -15,7 +15,7 @@ const Footer = ({ pathname }) => {
           <a href="http://berlincodeofconduct.org/">Code of Conduct</a>
         </section>
         <p className="footer--copyright">
-          © React Finland, {new Date().getFullYear()}
+          © GraphQL Finland, {new Date().getFullYear()}
         </p>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 {
-  "name": "react-finland-site",
+  "name": "graphql-finland-site",
   "version": "0.0.0",
-  "description": "React Finland site",
+  "description": "GraphQL Finland site",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "lint": "eslint . --ignore-path .gitignore --fix",
     "test": "npm run lint",
     "sitemap":
-      "cd build && sitemap-static --prefix=https://react-finland.fi/ > sitemap.xml",
+      "cd build && sitemap-static --prefix=https://graphql-finland.fi/ > sitemap.xml",
     "copy:all": "npm run copy:extra",
     "copy:extra": "cp -rfv assets/extra/* build",
     "styleguide": "styleguidist server",
@@ -23,15 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ReactFinland/site.git"
+    "url": "git@github.com:GraphQLFinland/site.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ReactFinland/site/issues"
+    "url": "https://github.com/GraphQLFinland/site/issues",
+    "homepage": "https://github.com/GraphQLFinland/site#readme"
   },
-  "homepage": "https://github.com/ReactFinland/site#readme",
   "dependencies": {
     "@react-finland/content-2018": "^12.29.0",
     "antwar": "^0.26.0",

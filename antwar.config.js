@@ -21,8 +21,8 @@ module.exports = {
     }),
     "/": page("index"),
     "2018": page("2018", {
-      description: "React Finland 2018",
-      title: "React Finland 2018",
+      description: "GraphQL Finland 2018",
+      title: "GraphQL Finland 2018",
     }),
     "for-attendees": page("for-attendees"),
     "for-sponsors": page("for-sponsors"),

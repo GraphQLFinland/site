@@ -20,7 +20,7 @@ import "../styles/fontello-codes.css";
 import "../styles/fontello-embedded.css";
 import "../styles/style.scss";
 
-const siteName = "React Finland";
+const siteName = "GraphQL Finland";
 
 const SiteBody = (
   {

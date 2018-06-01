@@ -19,23 +19,23 @@ const Header = ({ pathname, title }) => {
               src={logo}
               width={140}
               height={126}
-              alt="React Finland Logo"
+              alt="GraphQL Finland Logo"
               className="logo--image"
             />
             <span className="logo--title">
-              <span className="logo--text logo--text-top">React </span>
+              <span className="logo--text logo--text-top">GraphQL </span>
               <span className="logo--text logo--text-bottom">Finland</span>
             </span>
           </h1>
         </Link>
 
         <h2 className="header--tagline">
-          Learn More about React, Explore Finland.
+          Learn More about GraphQL, Explore Finland.
         </h2>
 
         <section className="header--dates">
           <time dateTime="2018-05-28/2018-06-12" className="header--date">
-            May/June 2019
+            October 2019
           </time>
           <address className="header--location">Helsinki, Finland</address>
         </section>
@@ -62,7 +62,7 @@ const Header = ({ pathname, title }) => {
               src={logo}
               width={140}
               height={126}
-              alt="React Finland Logo"
+              alt="GraphQL Finland Logo"
               className="logo--image"
             />
             <span className="logo--title">
