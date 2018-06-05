@@ -55,7 +55,7 @@ const SiteBody = (
         <div className="main-container container">
           <section className="grid grid_6col">
             {children}
-            <div className="grid--full">
+            {/* <div className="grid--full">
               <div className="sponsors sponsors_gold">
                 <AnchorHeader className="sponsors--heading" level={2}>
                   🥇 Gold Sponsors
@@ -93,14 +93,14 @@ const SiteBody = (
                   )}
                 </section>
               </div>
-            </div>
+            </div> */}
 
-            <AnchorHeader level={2}>Partners</AnchorHeader>
+            {/* <AnchorHeader level={2}>Partners</AnchorHeader>
             <div className="sponsors sponsors_partners grid--full">
               <section className="sponsors--list">
                 <Contacts items={partners} render={Sponsor} />
               </section>
-            </div>
+            </div> */}
           </section>
         </div>
         <Subscribe />

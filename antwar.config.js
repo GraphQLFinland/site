@@ -4,8 +4,9 @@ const {
 } = require("@react-finland/content-2018");
 
 module.exports = {
-  apiUrl: "https://api.react-finland.fi/graphql",
-  conferenceId: "react-finland-2018",
+  // apiUrl: "https://api.react-finland.fi/graphql",
+  apiUrl: "http://localhost:3333/graphql",
+  conferenceId: "graphql-finland-2018",
   template: {
     file: path.resolve(__dirname, "templates/page.ejs"),
     context: {
@@ -21,18 +22,18 @@ module.exports = {
       title: "Page not found",
     }),
     "/": page("index"),
-    "2018": page("2018", {
-      description: "GraphQL Finland 2018",
-      title: "GraphQL Finland 2018",
-    }),
-    "for-attendees": page("for-attendees"),
-    "for-sponsors": page("for-sponsors"),
-    about: page("about"),
-    imprint: page("imprint"),
-    "privacy-policy": page("privacy-policy"),
-    "2018/schedule": page("schedule"),
-    "2018/speakers": page("speakers"),
-    "2018/workshops": page("workshops"),
+    // "2018": page("2018", {
+    //   description: "GraphQL Finland 2018",
+    //   title: "GraphQL Finland 2018",
+    // }),
+    // "for-attendees": page("for-attendees"),
+    // "for-sponsors": page("for-sponsors"),
+    // about: page("about"),
+    // imprint: page("imprint"),
+    // "privacy-policy": page("privacy-policy"),
+    // "2018/schedule": page("schedule"),
+    // "2018/speakers": page("speakers"),
+    // "2018/workshops": page("workshops"),
   },
 };
 

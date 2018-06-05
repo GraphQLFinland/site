@@ -4,7 +4,6 @@ import connect from "./connect";
 import Schedule from "./Schedule";
 
 const ConnectedSchedule = ({ schedule = {} }) => {
-  console.log(schedule);
   return <Schedule items={schedule || {}} />;
 };
 

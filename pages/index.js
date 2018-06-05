@@ -17,14 +17,13 @@ const Index = ({ page = {}, conference: { speakers = [] } = {} }) => (
         <Markdown source={page.secondary} />
       </aside>
     </section>
-    <AnchorHeader level={2}>Past Speakers</AnchorHeader>
+    <AnchorHeader level={2}>Speakers</AnchorHeader>
     <div className="grid--full speakers">
       <Contacts items={speakers} render={ContactMini} />
     </div>
+    <div className="grid--full">More speakers would be announced soon!</div>
     <AnchorHeader level={2}>Tickets</AnchorHeader>
-    <div className="grid--full">
-      No more tickets for 2018. See you next year!
-    </div>
+    <div className="grid--full">Coming soon!</div>
   </>
 );
 

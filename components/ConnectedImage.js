@@ -8,7 +8,7 @@ const ConnectedImage = ({ alt, width, height, className, image }) => (
     width={width}
     height={height}
     className={className}
-    src={image && require(`${image.requirePath}`)}
+    src={image && image.url}
   />
 );
 
@@ -24,7 +24,7 @@ export default connect(
   `
   query ImageQuery($conferenceId: ID!, $image: String!){
     image(conferenceId: $conferenceId, image: $image) {
-      requirePath
+      url
     }
   }
 `,

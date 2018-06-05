@@ -7,7 +7,7 @@ import {
   connect,
 } from "components";
 
-const About = ({ page = {}, conference: { organizers = [] } } = {}) => (
+const About = ({ page = {}, conference: { organizers = [] } = {} } = {}) => (
   <>
     <section className="intro intro_about">
       <div className="intro--main">
