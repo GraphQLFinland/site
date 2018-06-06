@@ -33,8 +33,14 @@ module.exports = {
     // "for-attendees": page("for-attendees"),
     // "for-sponsors": page("for-sponsors"),
     // about: page("about"),
-    // imprint: page("imprint"),
-    // "privacy-policy": page("privacy-policy"),
+    imprint: page("imprint", {
+      title: "Imprint",
+      description: "How to reach GraphQL Finland organizers?",
+    }),
+    "privacy-policy": page("privacy-policy", {
+      title: "Privacy Policy",
+      description: "What is the privacy policy of GraphQL Finland?",
+    }),
     // "2018/schedule": page("schedule"),
     // "2018/speakers": page("speakers"),
     // "2018/workshops": page("workshops"),

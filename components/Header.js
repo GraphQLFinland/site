@@ -34,8 +34,8 @@ const Header = ({ pathname, title }) => {
         </h2>
 
         <section className="header--dates">
-          <time dateTime="2018-05-28/2018-06-12" className="header--date">
-            October 2019
+          <time dateTime="2018-10-18/2018-10-19" className="header--date">
+            October 18-19, 2018
           </time>
           <address className="header--location">Helsinki, Finland</address>
         </section>
