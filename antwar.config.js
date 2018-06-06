@@ -1,7 +1,7 @@
 const path = require("path");
-const {
-  content: { pages },
-} = require("@react-finland/content-2018");
+// const {
+//   content: { pages },
+// } = require("@react-finland/content-2018");
 
 module.exports = {
   apiUrl: "https://api.react-finland.fi/graphql",
@@ -21,7 +21,11 @@ module.exports = {
       description: "Page was not found",
       title: "Page not found",
     }),
-    "/": page("index"),
+    "/": page("index", {
+      title: "GraphQL Finland",
+      description:
+        "GraphQL Finland (18-19.10.2018, Helsinki) is a conference that comes with a workshop day and a day of talks.",
+    }),
     // "2018": page("2018", {
     //   description: "GraphQL Finland 2018",
     //   title: "GraphQL Finland 2018",
@@ -40,10 +44,11 @@ module.exports = {
 function page(name, meta) {
   const ret = () => {
     const pageComponent = require(`./pages/${name}`).default;
-    const pageData = pages.find(({ id }) => id === name) || {};
-
-    pageComponent.description = pageData.description || meta.description;
-    pageComponent.title = pageData.title || meta.title;
+    // const pageData = pages.find(({ id }) => id === name) || {};
+    //
+    // TODO - fix this
+    pageComponent.description = meta.description;
+    pageComponent.title = meta.title;
 
     return pageComponent;
   };

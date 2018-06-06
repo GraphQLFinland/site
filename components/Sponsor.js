@@ -5,7 +5,7 @@ const SponsorContent = ({ image, name, props }) => (
   <img
     alt={name}
     className="sponsors--logo"
-    src={require(`@react-finland/content-2018/images/${image}`)}
+    // src={require(`@react-finland/content-2018/images/${image}`)}
     {...props}
   />
 );
