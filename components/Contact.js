@@ -3,6 +3,7 @@ import ReactCountryFlag from "react-country-flag";
 import PropTypes from "prop-types";
 import Markdown from "./Markdown";
 import AnchorHeader from "./AnchorHeader";
+import ConnectedImage from "./ConnectedImage";
 
 const Contact = ({
   name,
@@ -20,12 +21,12 @@ const Contact = ({
         anchor={name}
         className="contact--header"
       >
-        <img
+        <ConnectedImage
           className="contact--photo photo"
           alt={about}
           width={100}
           height={100}
-          // src={require(`@react-finland/content-2018/images/${image}`)}
+          src={image}
         />
 
         <span className="contact--name">{name}</span>

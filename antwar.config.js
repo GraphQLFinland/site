@@ -32,7 +32,10 @@ module.exports = {
     // }),
     // "for-attendees": page("for-attendees"),
     // "for-sponsors": page("for-sponsors"),
-    // about: page("about"),
+    about: page("about", {
+      title: "About",
+      description: "What React Finland is about?",
+    }),
     imprint: page("imprint", {
       title: "Imprint",
       description: "How to reach GraphQL Finland organizers?",
@@ -47,7 +50,7 @@ module.exports = {
   },
 };
 
-function page(name, meta) {
+function page(name, meta = {}) {
   const ret = () => {
     const pageComponent = require(`./pages/${name}`).default;
     // const pageData = pages.find(({ id }) => id === name) || {};

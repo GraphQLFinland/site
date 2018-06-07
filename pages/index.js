@@ -21,9 +21,10 @@ const Index = ({ page = {}, conference: { speakers = [] } = {} }) => (
     <div className="grid--full speakers">
       <Contacts items={speakers} render={ContactMini} />
     </div>
-    <div className="grid--full">More speakers would be announced soon!</div>
-    <AnchorHeader level={2}>Tickets</AnchorHeader>
-    <div className="grid--full">Coming soon!</div>
+    <div className="intro--main">More speakers will be announced soon!</div>
+    <div className="intro--pushdown" />
+    {/* <AnchorHeader level={2}>Tickets</AnchorHeader>
+    <div className="intro--main">Coming soon!</div> */}
   </>
 );
 

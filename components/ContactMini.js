@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ConnectedImage from "./ConnectedImage";
 
 const ContactMiniContent = ({ image, name }) => [
-  <img
+  <ConnectedImage
     key="image"
     alt="about"
     className="contact-mini-logo photo"
-    // src={require(`@react-finland/content-2018/images/${image}`)}
+    src={image}
     width={100}
   />,
   <figcaption key="name" className="contact-mini-name">
