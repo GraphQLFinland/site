@@ -52,7 +52,7 @@ export default connect(`
     conference(id: $conferenceId) {
       organizers {
         name
-        image: {
+        image {
           url
         }
         about
