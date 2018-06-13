@@ -6,6 +6,9 @@ import Schedule from "./Schedule";
 const ConnectedSchedule = ({ schedule = {} }) => {
   return <Schedule items={schedule || {}} />;
 };
+ConnectedSchedule.propTypes = {
+  schedule: PropTypes.object,
+};
 
 export default connect(
   `
@@ -22,7 +25,9 @@ export default connect(
             type
             speakers {
               name
-              image
+              image {
+                url
+              }
               about
             }
             keywords
