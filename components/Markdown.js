@@ -30,6 +30,7 @@ const renderers = {
   heading: ({ level, children }) => (
     <AnchorHeader level={level}>{children}</AnchorHeader>
   ),
+  // TODO: Rewrite image handling
   image: ({ alt, src }) => {
     const srcParts = alt ? alt.split("|") : [];
     alt = srcParts[0] || "";
