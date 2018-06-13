@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Markdown } from "components";
 
 const PrivacyPolicy = () => (
@@ -45,8 +44,5 @@ Most web browsers accept cookies automatically, however, you may alter your brow
     </div>
   </section>
 );
-PrivacyPolicy.propTypes = {
-  page: PropTypes.object,
-};
 
 export default PrivacyPolicy;
