@@ -21,7 +21,7 @@ Sponsor.propTypes = {
   name: PropTypes.string,
   about: PropTypes.string,
   social: PropTypes.object,
-  image: PropTypes.string,
+  image: PropTypes.object,
   logoProps: PropTypes.object,
 };
 
