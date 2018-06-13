@@ -52,7 +52,9 @@ export default connect(`
           twitter
           linkedin
         }
-        image
+        image {
+          url
+        }
       }
     }
   }

@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import connect from "./connect";
 
-const ConnectedImage = ({ alt, width, height, className, image }) => (
+// TODO: Rename as Image
+const ConnectedImage = ({ alt, width, height, className, src }) => (
   <img
     alt={alt}
     width={width}
     height={height}
     className={className}
-    src={image && image.url}
+    src={src}
   />
 );
 
@@ -20,15 +20,4 @@ ConnectedImage.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
-export default connect(
-  `
-  query ImageQuery($conferenceId: ID!, $image: String!){
-    image(conferenceId: $conferenceId, image: $image) {
-      url
-    }
-  }
-`,
-  ({ src }) => ({
-    image: src,
-  })
-)(ConnectedImage);
+export default ConnectedImage;

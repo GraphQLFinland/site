@@ -7,9 +7,9 @@ const Workshops = ({ conference: { workshops = [] } = {} }) => (
     <Contacts items={workshops} render={Workshop} />
   </div>
 );
-// Workshops.propTypes = {
-//   workshops: PropTypes.array,
-// };
+Workshops.propTypes = {
+  conference: PropTypes.object,
+};
 
 export default connect(`
   query PageQuery($conferenceId: ID!) {
@@ -18,7 +18,9 @@ export default connect(`
         speakers {
           name
           about
-          image
+          image {
+            url
+          }
         }
         title
         description
