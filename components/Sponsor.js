@@ -1,16 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SponsorContent = ({ image, name, props }) => (
-  <img
-    alt={name}
-    className="sponsors--logo"
-    // src={require(`@react-finland/content-2018/images/${image}`)}
-    {...props}
-  />
+const SponsorContent = ({ src, name, props }) => (
+  <img alt={name} className="sponsors--logo" src={src} {...props} />
 );
 SponsorContent.propTypes = {
-  image: PropTypes.string,
+  src: PropTypes.string,
   name: PropTypes.string,
   props: PropTypes.object,
 };
@@ -18,7 +13,7 @@ SponsorContent.propTypes = {
 const Sponsor = ({ name, about, social, image, logoProps }) => (
   <figure className="sponsors--item">
     <a href={social.homepage} title={`${name} — ${about}`}>
-      <SponsorContent image={image} name={name} props={logoProps} />
+      <SponsorContent image={image.url} name={name} props={logoProps} />
     </a>
   </figure>
 );
