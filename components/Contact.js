@@ -68,7 +68,7 @@ const Contact = ({
 );
 Contact.propTypes = {
   name: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.object,
   social: PropTypes.object,
   location: PropTypes.object,
   about: PropTypes.string,
