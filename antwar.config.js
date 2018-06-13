@@ -26,12 +26,6 @@ module.exports = {
       description:
         "GraphQL Finland (18-19.10.2018, Helsinki) is a conference that comes with a workshop day and a day of talks.",
     }),
-    // "2018": page("2018", {
-    //   description: "GraphQL Finland 2018",
-    //   title: "GraphQL Finland 2018",
-    // }),
-    // "for-attendees": page("for-attendees"),
-    // "for-sponsors": page("for-sponsors"),
     about: page("about", {
       title: "About",
       description: "What React Finland is about?",
@@ -44,9 +38,6 @@ module.exports = {
       title: "Privacy Policy",
       description: "What is the privacy policy of GraphQL Finland?",
     }),
-    // "2018/schedule": page("schedule"),
-    // "2018/speakers": page("speakers"),
-    // "2018/workshops": page("workshops"),
   },
 };
 
