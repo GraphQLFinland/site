@@ -7,11 +7,17 @@ import {
   connect,
 } from "components";
 
-const About = ({ page = {}, conference: { organizers = [] } = {} } = {}) => (
+const About = ({ conference: { organizers = [] } = {} } = {}) => (
   <>
     <section className="intro intro_about">
       <div className="intro--main">
-        <Markdown source={page.intro} />
+        <Markdown
+          source={`
+We want to provide a new plaftform for discussions and talks about GraphQL, as well as a place where people could learn more about it. We also want to provide the best of Finnish hospitality to our conference visitors.
+
+We hope to create something unique by combining our northern traditions with speakers and visitors from all around the world.
+`}
+        />
       </div>
       <aside className="intro--aside" />
     </section>
@@ -49,9 +55,6 @@ export default connect(`
         image
         about
       }
-    }
-    page(conferenceId: $conferenceId, id: "about") {
-      intro
     }
   }
 `)(About);
