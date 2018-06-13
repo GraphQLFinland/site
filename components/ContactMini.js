@@ -7,7 +7,7 @@ const ContactMiniContent = ({ image, name }) => [
     key="image"
     alt="about"
     className="contact-mini-logo photo"
-    src={image}
+    src={image.url}
     width={100}
   />,
   <figcaption key="name" className="contact-mini-name">
@@ -15,7 +15,7 @@ const ContactMiniContent = ({ image, name }) => [
   </figcaption>,
 ];
 ContactMiniContent.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.object,
   name: PropTypes.string,
 };
 

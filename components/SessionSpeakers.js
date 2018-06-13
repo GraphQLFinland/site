@@ -20,7 +20,7 @@ const SessionSpeakers = ({ speakers = [] }) => (
             key={i}
             width={32}
             height={32}
-            src={image}
+            src={image.url}
           />
           {name}
         </a>,
