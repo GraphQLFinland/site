@@ -1,22 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Markdown, connect } from "components";
+import { Markdown } from "components";
 
-const Imprint = ({ page: { main } }) => (
+const Imprint = () => (
   <section className="intro intro_imprint">
     <div className="intro--main">
-      <Markdown source={main} />
+      <Markdown
+        source={`
+* React Finland ry
+* Lehdokkipolku 2 A 2
+* 00930 Helsinki
+* info <at> react-finland.fi
+`}
+      />
     </div>
   </section>
 );
-Imprint.propTypes = {
-  page: PropTypes.object,
-};
 
-export default connect(`
-  query PageQuery($conferenceId: ID!) {
-    page(conferenceId: $conferenceId, id: "imprint") {
-      main
-    }
-  }
-`)(Imprint);
+export default Imprint;
