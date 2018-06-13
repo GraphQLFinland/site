@@ -126,7 +126,9 @@ const sponsorFragment = `
       homepage
     }
     about
-    image
+    image {
+      url
+    }
   }
 `;
 
