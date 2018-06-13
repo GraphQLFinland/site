@@ -1,11 +1,7 @@
 const path = require("path");
-// const {
-//   content: { pages },
-// } = require("@react-finland/content-2018");
 
 module.exports = {
-  apiUrl: "https://api.react-finland.fi/graphql",
-  // apiUrl: "http://localhost:3333/graphql",
+  apiUrl: "https://api.react-finland.fi/graphql", // "http://localhost:3333/graphql",
   conferenceId: "graphql-finland-2018",
   template: {
     file: path.resolve(__dirname, "templates/page.ejs"),
@@ -44,9 +40,7 @@ module.exports = {
 function page(name, meta = {}) {
   const ret = () => {
     const pageComponent = require(`./pages/${name}`).default;
-    // const pageData = pages.find(({ id }) => id === name) || {};
-    //
-    // TODO - fix this
+
     pageComponent.description = meta.description;
     pageComponent.title = meta.title;
 
