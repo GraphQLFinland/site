@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
 const { getDataFromTree } = require("react-apollo");
@@ -18,5 +19,9 @@ module.exports = function renderDefault({ location, content: component }, cb) {
         context: { helmet: helmetContext.helmet },
       })
     )
-    .catch(cb);
+    .catch(err => {
+      console.error("failed to render", page, err);
+
+      cb(err);
+    });
 };
