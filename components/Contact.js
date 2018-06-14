@@ -9,7 +9,7 @@ const Contact = ({
   name,
   image,
   social,
-  location,
+  country,
   about,
   headerLevel = 2,
   children,
@@ -31,9 +31,11 @@ const Contact = ({
 
         <span className="contact--name">{name}</span>
 
-        <span className="contact--country">
-          <ReactCountryFlag code={location.country.code} svg />
-        </span>
+        {country ? (
+          <span className="contact--country">
+            <ReactCountryFlag code={country.code} svg />
+          </span>
+        ) : null}
       </AnchorHeader>
 
       <div className="social">

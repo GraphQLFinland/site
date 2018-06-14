@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  AnchorHeader,
-  Contacts,
-  ContactMini,
-  Markdown,
-  connect,
-} from "components";
+import { AnchorHeader, Contacts, Contact, Markdown, connect } from "components";
 
 const Index = ({ conference: { speakers = [] } = {} }) => (
   <>
@@ -30,13 +24,26 @@ In this single track event you will learn more about GraphQL and surrounding top
       </aside>
     </section>
     <AnchorHeader level={2}>Speakers</AnchorHeader>
-    <div className="grid--full speakers">
-      <Contacts items={speakers} render={ContactMini} />
+    <div className="grid--5col speakers">
+      <Contacts items={speakers} render={Contact} />
     </div>
     <div className="intro--main">More speakers will be announced soon!</div>
-    <div className="intro--pushdown" />
     {/* <AnchorHeader level={2}>Tickets</AnchorHeader>
     <div className="intro--main">Coming soon!</div> */}
+    <AnchorHeader level={2}>Venue - Paasitorni</AnchorHeader>
+    <div className="intro--main">
+      <img
+        alt="Paasitorni"
+        style={{ width: "100%" }}
+        src={
+          "https://www.paasitorni.fi/app/uploads/2017/12/IMG_2411-1-1000x667.jpg"
+        }
+      />
+      <Markdown
+        source={`The conference will be held at [Paasitorni](https://www.paasitorni.fi/en/), a historic building in Siltasaari, near the center of Helsinki. Paasitorni is a gorgeous Art Noveue building that in past served as Worker's House. On 18th, several meeting rooms would be used for the workshops. On 19th, the big congress hall will be the main conference location.`}
+      />
+    </div>
+    <div className="intro--pushdown" />
   </>
 );
 
@@ -46,6 +53,9 @@ export default connect(`
       speakers {
         name
         about
+        country {
+          code
+        }
         social {
           homepage
           github
