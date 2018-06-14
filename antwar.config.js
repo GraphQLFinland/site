@@ -34,6 +34,10 @@ module.exports = {
       title: "Privacy Policy",
       description: "What is the privacy policy of GraphQL Finland?",
     }),
+    "for-attendees": page("for-attendees", {
+      title: "For Attendees",
+      description: "What should I know as a React Finland attendee?",
+    }),
   },
 };
 
