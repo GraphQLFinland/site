@@ -1,5 +1,12 @@
 import React from "react";
-import { AnchorHeader, Contacts, Contact, Markdown, connect } from "components";
+import {
+  AnchorHeader,
+  Contacts,
+  Contact,
+  Markdown,
+  Tickets,
+  connect,
+} from "components";
 
 const Index = ({ conference: { speakers = [] } = {} }) => (
   <>
@@ -44,6 +51,10 @@ In this single track event you will learn more about GraphQL and surrounding top
       />
     </div>
     <div className="intro--pushdown" />
+    <AnchorHeader level={2}>Tickets</AnchorHeader>
+    <div className="grid--5col">
+      <Tickets />
+    </div>
   </>
 );
 

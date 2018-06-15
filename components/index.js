@@ -16,5 +16,6 @@ export { default as Speaker } from "./Speaker";
 export { default as Sponsor } from "./Sponsor";
 export { default as Footer } from "./Footer";
 export { default as VenueGallery } from "./VenueGallery";
+export { default as Tickets } from "./Tickets";
 export { default as Workshop } from "./Workshop";
 export { default as connect } from "./connect";
