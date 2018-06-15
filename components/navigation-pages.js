@@ -30,8 +30,9 @@ export default [
     },
     links: [
       {
+        // https://www.youtube.com/c/GraphQLFinlan
         title: (
-          <a href="https://www.youtube.com/c/GraphQLFinland">
+          <a href="https://www.youtube.com/channel/UCReJkc0nO9jhVTNgm5psuFA">
             <i className="icon-youtube-play" />
           </a>
         ),
