@@ -103,7 +103,7 @@ const SiteBody = (
             </div> */}
           </section>
         </div>
-        <Subscribe />
+        <Subscribe list="https://react-finland.us16.list-manage.com/subscribe/post?u=a940d62db3f360204bf40b1c4&amp;id=7cb74ccf50" />
         <Footer />
       </main>
     </AnchorProvider>

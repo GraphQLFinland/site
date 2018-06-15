@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// TODO: Generalize the component
-// TODO: Update the form action to match GraphQL mailing list
 const Subscribe = ({
   children = "Subscribe to get GraphQL Finland related news to your mail.",
+  list = "", // Get this from mailchimp
 }) => {
   return (
     <section className="subscribe">
@@ -12,7 +11,7 @@ const Subscribe = ({
         <h2 className="subscribe--header">{children}</h2>
 
         <form
-          action="TODO"
+          action={list}
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
@@ -57,6 +56,7 @@ const Subscribe = ({
 };
 Subscribe.propTypes = {
   children: PropTypes.element,
+  list: PropTypes.string.isRequired,
 };
 
 export default Subscribe;
