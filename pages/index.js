@@ -52,7 +52,7 @@ In this single track event you will learn more about GraphQL and surrounding top
     </div>
     <div className="intro--pushdown" />
     <AnchorHeader level={2}>Tickets</AnchorHeader>
-    <div className="grid--5col">
+    <div className="grid--full">
       <Tickets />
     </div>
   </>
