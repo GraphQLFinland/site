@@ -38,6 +38,10 @@ module.exports = {
       title: "For Attendees",
       description: "What should I know as a React Finland attendee?",
     }),
+    "for-sponsors": page("for-sponsors", {
+      title: "For Sponsors",
+      description: "What should I know as a React Finland sponsor?",
+    }),
   },
 };
 

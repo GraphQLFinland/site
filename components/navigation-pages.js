@@ -22,6 +22,10 @@ export default [
         title: "For Attendees",
         url: "/for-attendees/",
       },
+      {
+        title: "For Sponsors",
+        url: "/for-sponsors/",
+      },
     ],
   },
   {
