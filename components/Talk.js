@@ -3,33 +3,30 @@ import PropTypes from "prop-types";
 import { AnchorHeader, Markdown } from "components";
 
 const TYPES = {
-  keynote: "🗝",
-  lightningTalk: "⚡️",
-  presentation: "🎙",
+  KEYNOTE: "🗝",
+  LIGHTNING_TALK: "⚡️",
+  PRESENTATION: "🎙",
+  WORKSHOP: "👩‍💻",
 };
 
-const Talk = ({
-  title,
-  description,
-  urls: { slides, web },
-  type,
-  headerLevel = 2,
-}) => (
+const Talk = ({ title, description, urls, type, headerLevel = 2 }) => (
   <div className="content-block">
     <AnchorHeader level={headerLevel}>
       <span title={type}>{TYPES[type]}</span> {title || "To be announced."}
       <span style={{ marginLeft: "1em" }}>&nbsp;</span>
-      {slides && (
-        <a href={slides} style={{ fontSize: "small" }} target="_blank">
-          Slides (PDF)
-        </a>
-      )}
+      {urls &&
+        urls.slides && (
+          <a href={urls.slides} style={{ fontSize: "small" }} target="_blank">
+            Slides (PDF)
+          </a>
+        )}
       <span style={{ marginLeft: "1em" }}>&nbsp;</span>
-      {web && (
-        <a href={web} style={{ fontSize: "small" }} target="_blank">
-          Slides (web)
-        </a>
-      )}
+      {urls &&
+        urls.web && (
+          <a href={urls.web} style={{ fontSize: "small" }} target="_blank">
+            Slides (web)
+          </a>
+        )}
     </AnchorHeader>
 
     {description ? <Markdown source={description} /> : "To be announced."}

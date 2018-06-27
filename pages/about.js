@@ -55,6 +55,12 @@ export default connect(`
         image {
           url
         }
+        social {
+          homepage
+          github
+          twitter
+          linkedin
+        }
         about
       }
     }

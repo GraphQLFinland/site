@@ -12,8 +12,15 @@ const ForAttendees = () => (
       </div>
       <aside className="intro--aside" />
     </section>
-    <AnchorHeader level={2}>The Venue</AnchorHeader>
-    <div className="grid--5col">
+    <AnchorHeader level={2}>Venue - Paasitorni</AnchorHeader>
+    <div className="intro--main">
+      <img
+        alt="Paasitorni"
+        style={{ width: "100%" }}
+        src={
+          "https://www.paasitorni.fi/app/uploads/2017/12/IMG_2411-1-1000x667.jpg"
+        }
+      />
       <Markdown
         source={`The conference will be held at [Paasitorni](https://www.paasitorni.fi/en/), a historic building in Siltasaari, near the center of Helsinki. Paasitorni is a gorgeous Art Noveue building that in past served as Worker's House. On 18th, several meeting rooms would be used for the workshops. On 19th, the big congress hall will be the main conference location.`}
       />
@@ -45,21 +52,17 @@ const ForAttendees = () => (
     </div> */}
     <div className="grid--5col">
       <Markdown
-        source={`## Where to Stay?
+        source={`
+## How to Get to the Venue?
+
+There's a direct train from the airport to Helsinki center. HSL operates the local public transport system. You can find a city bike system as well. From city center, take a tram or metro to Hakaniemi.
+
+## Where to Stay?
 
 * [Hotel F6](https://www.hotelf6.fi/) - Roughly 160€ per night.
 * [Omena Hotels](https://www.omenahotels.com/en/) - Roughly 60-80€ per night. Minimal service. Two separate hotels.
 * [Kongressikoti Hotel](http://kongressikoti.fi/) - Roughly 60€ per night.
 * [Hostel Diana Park](http://www.dianapark.fi/) - Roughly 30€ per night.
-
-## How to Get to the Venue?
-
-There's a direct train from the airport to Helsinki center. HSL operates the local public transport system. You can find a city bike system as well. From city center, take a tram or metro to Hakaniemi. 
-
-## What to Take with You?
-
-* A swimming suit.
-* A towel.
 
 ## How to Follow the Conference Program?
 
@@ -73,7 +76,7 @@ There's a direct train from the airport to Helsinki center. HSL operates the loc
 * We use euro as our currency.
 * Finland is generally considered a safe country. Do **not** try to go past people in the grill queue, through, as that's a common way to find yourself in a trouble.
 * Finland has about 5.5 million residents. That's about 1.6 times the population of Berlin spread around a big area. Whole Germany has roughly the same land area.
-* Some Finns don't like if you tell them Finland is a part of Scandinavia. Technically a small part in the north is but some consider Finland as a culturally separate entity. The more inclusive term to use might be *fennoscandia* (Finland and the rest).
+* Some Finns don't like if you tell them Finland is a part of Scandinavia. Other Scandinavians also don't like when you tell them that Finland is part of Scandinavia. It's complicated. You can all us all *Nordics*. Don't tell Estonia.
   `}
       />
     </div>

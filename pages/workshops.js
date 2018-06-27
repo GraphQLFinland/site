@@ -29,6 +29,10 @@ export default connect(`
           address
           city
         }
+        tickets {
+          name
+          link
+        }
       }
     }
   }

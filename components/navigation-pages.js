@@ -11,20 +11,20 @@ export default [
         url: "/",
       },
       {
-        title: "About",
-        url: "/about/",
-      },
-      {
         title: "Buy tickets",
         url: "/#tickets",
       },
       {
-        title: "For Attendees",
-        url: "/for-attendees/",
+        title: "Speakers",
+        url: "/speakers/",
       },
       {
-        title: "For Sponsors",
-        url: "/for-sponsors/",
+        title: "Workshops",
+        url: "/workshops/",
+      },
+      {
+        title: "About",
+        url: "/about/",
       },
     ],
   },
@@ -69,14 +69,14 @@ export default [
       className: "nav--secondary",
     },
     links: [
-      // {
-      //   title: "For Attendees",
-      //   url: "/for-attendees/",
-      // },
-      // {
-      //   title: "For Sponsors",
-      //   url: "/for-sponsors/",
-      // },
+      {
+        title: "For Attendees",
+        url: "/for-attendees/",
+      },
+      {
+        title: "For Sponsors",
+        url: "/for-sponsors/",
+      },
     ],
   },
 ];

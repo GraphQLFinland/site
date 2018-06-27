@@ -27,6 +27,8 @@ export default connect(`
         }
         workshops {
           title
+          type
+          description
         }
         image {
           url
@@ -37,10 +39,8 @@ export default connect(`
           twitter
           linkedin
         }
-        location {
-          country {
-            code
-          }
+        country {
+          code
         }
         about
         keywords

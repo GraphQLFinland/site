@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  apiUrl: "https://api.react-finland.fi/graphql", // "http://localhost:3333/graphql",
+  apiUrl: "https://api.react-finland.fi/graphql", // apiUrl: "http://localhost:3333/graphql",
   conferenceId: "graphql-finland-2018",
   template: {
     file: path.resolve(__dirname, "templates/page.ejs"),
@@ -41,6 +41,14 @@ module.exports = {
     "for-sponsors": page("for-sponsors", {
       title: "For Sponsors",
       description: "What should I know as a React Finland sponsor?",
+    }),
+    speakers: page("speakers", {
+      title: "Speakers",
+      speakers: "Who is going to speak?",
+    }),
+    workshops: page("workshops", {
+      title: "Workshops",
+      description: "Which workshops will be held?",
     }),
   },
 };

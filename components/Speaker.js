@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Contact, Contacts } from "components";
-import SessionLink from "./SessionLink";
 import Talk from "./Talk.js";
 
 const Speaker = ({ talks, workshops, ...contact }) => (
@@ -15,14 +14,18 @@ const Speaker = ({ talks, workshops, ...contact }) => (
         />
       </div>
     )}
-    {workshops &&
-      workshops.every(({ title }) => title) && (
-        <div className="speaker-workshops">
-          <Contacts items={workshops} render={SessionLink("workshops")} />
-        </div>
-      )}
+    {workshops && (
+      <div className="speaker-workshops">
+        <Contacts
+          items={workshops}
+          render={Talk}
+          renderProps={{ headerLevel: 3 }}
+        />
+      </div>
+    )}
   </Contact>
 );
+
 Speaker.propTypes = {
   talks: PropTypes.array,
   workshops: PropTypes.array,
