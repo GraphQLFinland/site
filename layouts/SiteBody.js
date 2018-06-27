@@ -95,12 +95,12 @@ const SiteBody = (
               </div>
             </div> */}
 
-            {/* <AnchorHeader level={2}>Partners</AnchorHeader>
+            <AnchorHeader level={2}>Partners</AnchorHeader>
             <div className="sponsors sponsors_partners grid--full">
               <section className="sponsors--list">
                 <Contacts items={partners} render={Sponsor} />
               </section>
-            </div> */}
+            </div>
           </section>
         </div>
         <Subscribe list="https://react-finland.us16.list-manage.com/subscribe/post?u=a940d62db3f360204bf40b1c4&amp;id=7cb74ccf50" />

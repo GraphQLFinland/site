@@ -13,7 +13,7 @@ SponsorContent.propTypes = {
 const Sponsor = ({ name, about, social, image, logoProps }) => (
   <figure className="sponsors--item">
     <a href={social.homepage} title={`${name} — ${about}`}>
-      <SponsorContent image={image.url} name={name} props={logoProps} />
+      <SponsorContent src={image.url} name={name} props={logoProps} />
     </a>
   </figure>
 );
