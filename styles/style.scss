@@ -250,8 +250,8 @@ address {
     align-items: center;
   }
   &--tagline {
-    grid-column: 2 / span 3;
-    grid-row: 3;
+    grid-column: 4 / span 3;
+    grid-row: 2;
     margin: 0;
     padding: 0;
     font-size: xx-large;
@@ -260,8 +260,11 @@ address {
     }
   }
   &--dates {
+    padding: 0.5em;
+    color: $color-accent;
+    background-color: white;
     font-size: xx-large;
-    grid-column: 5 / span 2;
+    grid-column: 4 / span 3;
     @media (max-width: $mobile-breakpoint) {
       grid-column: 2 / span 5;
     }
@@ -336,7 +339,7 @@ address {
       padding-top: $pu * 8;
     }
     .header--logo {
-      grid-column: span 4;
+      grid-column: span 3;
       grid-row: 2;
       justify-self: start;
     }
