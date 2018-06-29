@@ -248,6 +248,9 @@ address {
     padding-bottom: $pu * 8;
     margin: auto;
     align-items: center;
+    @media (max-width: $mobile-breakpoint) {
+      display: block;
+    }
   }
   &--tagline {
     grid-column: 4 / span 3;
@@ -255,24 +258,31 @@ address {
     margin: 0;
     padding: 0;
     font-size: xx-large;
-    @media (max-width: $mobile-breakpoint) {
-      grid-column: 2 / span 5;
-    }
   }
   &--dates {
-    padding: 0.5em;
     color: $color-accent;
     background-color: white;
     font-size: xx-large;
     grid-column: 4 / span 3;
     @media (max-width: $mobile-breakpoint) {
-      grid-column: 2 / span 5;
+      margin-top: 1em;
     }
   }
+  &--dates::before {
+    content: " ";
+    width: 20px;
+    margin-top: 0.5em;
+    margin-left: -19px;
+    height: 78px;
+    float: left;
+    background: url("../assets/img/tri-big-left.svg");
+  }
   &--date {
+    padding: 0.5em;
     font-size: larger;
   }
   &--location {
+    padding: 0.5em;
   }
   &--buy {
     grid-column: 5 / span 2;
