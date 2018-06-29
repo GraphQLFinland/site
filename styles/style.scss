@@ -266,6 +266,7 @@ address {
     font-size: xx-large;
     grid-column: 5 / span 2;
     grid-row: 3;
+    margin-top: -40%;
     @media (max-width: $mobile-breakpoint) {
       margin-top: 1em;
     }
@@ -343,6 +344,11 @@ address {
   &--topic {
     grid-column: 3 / span 4;
     color: black;
+    margin-top: -20%;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-top: 0;
+    }
 
     &-background::before {
       content: " ";
