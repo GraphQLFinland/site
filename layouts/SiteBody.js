@@ -35,29 +35,28 @@ const SiteBody = (
       silverSponsors = [],
       bronzeSponsors = [],
     } = {},
-    ...rest
+    contact: speaker,
   },
   { router }
-) =>
-  console.log("contact", rest) || (
-    <HelmetProvider
-      context={
-        router && router.staticContext && router.staticContext.helmetContext
-      }
-    >
-      <AnchorProvider>
-        <Meta
-          siteName={siteName}
-          title={title}
-          description={description}
-          keywords={keywords}
-        />
-        <main>
-          <Header pathname={pathname} title={title} />
-          <div className="main-container container">
-            <section className="grid grid_6col">
-              {children}
-              {/* <div className="grid--full">
+) => (
+  <HelmetProvider
+    context={
+      router && router.staticContext && router.staticContext.helmetContext
+    }
+  >
+    <AnchorProvider>
+      <Meta
+        siteName={siteName}
+        title={title}
+        description={description}
+        keywords={keywords}
+      />
+      <main>
+        <Header pathname={pathname} title={title} speaker={speaker} />
+        <div className="main-container container">
+          <section className="grid grid_6col">
+            {children}
+            {/* <div className="grid--full">
               <div className="sponsors sponsors_gold">
                 <AnchorHeader className="sponsors--heading" level={2}>
                   🥇 Gold Sponsors
@@ -97,20 +96,20 @@ const SiteBody = (
               </div>
             </div> */}
 
-              <AnchorHeader level={2}>Partners</AnchorHeader>
-              <div className="sponsors sponsors_partners grid--full">
-                <section className="sponsors--list">
-                  <Contacts items={partners} render={Sponsor} />
-                </section>
-              </div>
-            </section>
-          </div>
-          <Subscribe list="https://react-finland.us16.list-manage.com/subscribe/post?u=a940d62db3f360204bf40b1c4&amp;id=7cb74ccf50" />
-          <Footer />
-        </main>
-      </AnchorProvider>
-    </HelmetProvider>
-  );
+            <AnchorHeader level={2}>Partners</AnchorHeader>
+            <div className="sponsors sponsors_partners grid--full">
+              <section className="sponsors--list">
+                <Contacts items={partners} render={Sponsor} />
+              </section>
+            </div>
+          </section>
+        </div>
+        <Subscribe list="https://react-finland.us16.list-manage.com/subscribe/post?u=a940d62db3f360204bf40b1c4&amp;id=7cb74ccf50" />
+        <Footer />
+      </main>
+    </AnchorProvider>
+  </HelmetProvider>
+);
 SiteBody.propTypes = {
   children: PropTypes.node,
   location: PropTypes.object,
@@ -155,6 +154,13 @@ export default hot(module)(
       contact(contactName: "Ivan Goncharov", conferenceId: $conferenceId) {
         name
         about
+        image {
+          url
+        }
+        talks {
+          title
+          description
+        }
       }
     }
 

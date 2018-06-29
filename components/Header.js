@@ -7,8 +7,17 @@ import navigationPages from "./navigation-pages";
 /*import Countdown from "./Countdown";
 import Interactive from "antwar-interactive";*/
 
-const Header = ({ pathname, title }) => {
+const Header = ({
+  pathname,
+  title,
+  speaker = { image: { url: "" }, talks: [] },
+}) => {
   const isHomePage = pathname === "/";
+  const about = speaker.about ? speaker.about.split(".")[0] + "." : "";
+  const talk = speaker.talks.length
+    ? speaker.talks[0]
+    : { title: "", description: "" };
+
   return isHomePage ? (
     <header className={isHomePage ? "header header_index" : "header"}>
       <div className="header--container container grid grid_6col">
@@ -28,6 +37,23 @@ const Header = ({ pathname, title }) => {
             </span>
           </h1>
         </Link>
+
+        <section className="header--speaker">
+          <h3 className="header--speaker-header">Speaker</h3>
+          <img
+            className="header--speaker-image"
+            src={speaker.image.url}
+            alt={speaker.name}
+          />
+          <div className="header--speaker-name">{speaker.name}</div>
+          <div className="header--speaker-about">{about}</div>
+        </section>
+
+        <section className="header--topic">
+          <h3 className="header--topic-header">Topic</h3>
+          <div className="header--topic-title">{talk.title}</div>
+          <div className="header--topic-description">{talk.description}</div>
+        </section>
 
         <h2 className="header--tagline">
           Learn More about GraphQL, Explore Finland.
@@ -79,6 +105,7 @@ const Header = ({ pathname, title }) => {
 Header.propTypes = {
   pathname: PropTypes.string,
   title: PropTypes.string,
+  speaker: PropTypes.object,
 };
 
 export default Header;

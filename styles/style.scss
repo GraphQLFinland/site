@@ -302,6 +302,50 @@ address {
     padding: 0;
     font-size: 3em;
   }
+  &--speaker {
+    grid-column: 1 / span 2;
+    color: black;
+    max-width: 100%;
+
+    &-header {
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+    &-image {
+      background-color: white;
+      max-width: 200px;
+    }
+    &-name {
+      background-color: white;
+      color: $color-accent;
+      padding-top: 1em;
+      padding-left: 1em;
+    }
+    &-about {
+      background-color: white;
+      padding: 1em;
+    }
+  }
+  &--topic {
+    grid-column: 3 / span 4;
+    color: black;
+
+    &-header {
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+    &-title {
+      background-color: white;
+      color: $color-accent;
+      font-size: large;
+      padding-top: 1em;
+      padding-left: 1em;
+    }
+    &-description {
+      background-color: white;
+      padding: 1em;
+    }
+  }
 }
 
 .logo {
