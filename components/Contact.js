@@ -72,6 +72,7 @@ Contact.propTypes = {
   name: PropTypes.string,
   image: PropTypes.object,
   social: PropTypes.object,
+  country: PropTypes.string,
   location: PropTypes.object,
   about: PropTypes.string,
   headerLevel: PropTypes.number,
