@@ -307,32 +307,57 @@ address {
     color: black;
     max-width: 100%;
 
+    &-background::before {
+      content: " ";
+      width: 200px;
+      margin-left: -48px;
+      height: 170px;
+      position: absolute;
+      background: url("../assets/img/hex.svg");
+      background-size: 100%;
+    }
     &-header {
       text-transform: uppercase;
-      margin-top: 0;
+      margin-top: 0.5em;
+      margin-left: 0;
+      position: relative;
     }
     &-image {
       background-color: white;
       max-width: 200px;
+      position: relative;
     }
     &-name {
       background-color: white;
       color: $color-accent;
       padding-top: 1em;
       padding-left: 1em;
+      position: relative;
     }
     &-about {
       background-color: white;
       padding: 1em;
+      position: relative;
     }
   }
   &--topic {
     grid-column: 3 / span 4;
     color: black;
 
+    &-background::before {
+      content: " ";
+      width: 200px;
+      margin-left: -48px;
+      height: 170px;
+      position: absolute;
+      background: url("../assets/img/hex.svg");
+      background-size: 100%;
+    }
     &-header {
       text-transform: uppercase;
-      margin-top: 0;
+      margin-top: 0.5em;
+      margin-left: 1em;
+      position: relative;
     }
     &-title {
       background-color: white;
@@ -340,10 +365,12 @@ address {
       font-size: large;
       padding-top: 1em;
       padding-left: 1em;
+      position: relative;
     }
     &-description {
       background-color: white;
       padding: 1em;
+      position: relative;
     }
   }
 }

@@ -39,6 +39,7 @@ const Header = ({
         </Link>
 
         <section className="header--speaker">
+          <div className="header--speaker-background" />
           <h3 className="header--speaker-header">Speaker</h3>
           <img
             className="header--speaker-image"
@@ -50,6 +51,7 @@ const Header = ({
         </section>
 
         <section className="header--topic">
+          <div className="header--topic-background" />
           <h3 className="header--topic-header">Topic</h3>
           <div className="header--topic-title">{talk.title}</div>
           <div className="header--topic-description">{talk.description}</div>
