@@ -245,7 +245,7 @@ address {
 
   &--container {
     padding-top: $pu * 3;
-    padding-bottom: $pu * 8;
+    padding-bottom: $pu * 6;
     margin: auto;
     align-items: center;
     @media (max-width: $mobile-breakpoint) {
@@ -270,12 +270,12 @@ address {
   }
   &--dates::before {
     content: " ";
-    width: 80px;
-    margin-top: 0.5em;
-    margin-left: -19px;
-    height: 70px;
+    width: 200px;
+    margin-left: -50px;
+    height: 170px;
     position: absolute;
     background: url("../assets/img/hex.svg");
+    background-size: 100%;
   }
   &--date {
     padding: 0.5em;
