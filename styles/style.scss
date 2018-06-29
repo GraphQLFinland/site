@@ -270,19 +270,23 @@ address {
   }
   &--dates::before {
     content: " ";
-    width: 20px;
+    width: 80px;
     margin-top: 0.5em;
     margin-left: -19px;
-    height: 78px;
-    float: left;
-    background: url("../assets/img/tri-big-left.svg");
+    height: 70px;
+    position: absolute;
+    background: url("../assets/img/hex.svg");
   }
   &--date {
     padding: 0.5em;
     font-size: larger;
+    z-index: 100;
+    position: relative;
   }
   &--location {
     padding: 0.5em;
+    z-index: 100;
+    position: relative;
   }
   &--buy {
     grid-column: 5 / span 2;
