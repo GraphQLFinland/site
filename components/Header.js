@@ -51,7 +51,7 @@ const Header = ({
 
         <section className="header--speaker">
           <div className="header--speaker-background" />
-          <h3 className="header--speaker-header">Speaker</h3>
+          <h3 className="header--speaker-header">Featuring</h3>
           <img
             className="header--speaker-image"
             src={speaker.image.url}
