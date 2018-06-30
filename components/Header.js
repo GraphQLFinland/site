@@ -38,6 +38,17 @@ const Header = ({
           </h1>
         </Link>
 
+        <h2 className="header--tagline">
+          Learn More about GraphQL, Explore Finland.
+        </h2>
+
+        <section className="header--dates">
+          <time dateTime="2018-10-18/2018-10-19" className="header--date">
+            October 18-19, 2018
+          </time>
+          <address className="header--location">Helsinki, Finland</address>
+        </section>
+
         <section className="header--speaker">
           <div className="header--speaker-background" />
           <h3 className="header--speaker-header">Speaker</h3>
@@ -55,17 +66,6 @@ const Header = ({
           <h3 className="header--topic-header">Topic</h3>
           <div className="header--topic-title">{talk.title}</div>
           <div className="header--topic-description">{talk.description}</div>
-        </section>
-
-        <h2 className="header--tagline">
-          Learn More about GraphQL, Explore Finland.
-        </h2>
-
-        <section className="header--dates">
-          <time dateTime="2018-10-18/2018-10-19" className="header--date">
-            October 18-19, 2018
-          </time>
-          <address className="header--location">Helsinki, Finland</address>
         </section>
         {/*<Interactive
           id="components/Countdown.js"

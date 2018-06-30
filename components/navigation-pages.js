@@ -11,7 +11,7 @@ export default [
         url: "/",
       },
       {
-        title: "Buy tickets",
+        title: "Tickets",
         url: "/#tickets",
       },
       {
