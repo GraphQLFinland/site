@@ -19,10 +19,18 @@
     .heading {
       margin-top: 0;
     }
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-top: 0;
+    }
   }
 
   .session--topic-background::before {
     width: 250px;
     height: 200px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    display: block !important;
   }
 }
