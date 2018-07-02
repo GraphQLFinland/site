@@ -5,6 +5,13 @@ import Markdown from "./Markdown";
 import Keywords from "./Keywords";
 import SessionSpeakers from "./SessionSpeakers";
 
+const TYPES = {
+  KEYNOTE: "🗝",
+  LIGHTNING_TALK: "⚡️",
+  PRESENTATION: "🎙",
+  WORKSHOP: "👩‍💻",
+};
+
 const Schedule = ({ intervals }) => (
   <dl className="schedule">
     {intervals.map(({ begin, end, sessions }, i) => [
@@ -12,9 +19,10 @@ const Schedule = ({ intervals }) => (
         {begin}–{end}
       </dt>,
       <dd key={`dd-${i}`}>
-        {sessions.map(({ title, description, speakers, keywords }, i) => (
+        {sessions.map(({ title, type, description, speakers, keywords }, i) => (
           <div className="session" key={`session-${i}`}>
             <AnchorHeader level={3} anchor={title} key={`title-${i}`}>
+              {TYPES[type] && <span title={type}>{TYPES[type]} </span>}
               {title} {title && speakers && "—"}{" "}
               {speakers && (
                 <SessionSpeakers
