@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "./Link";
 import Navigation from "./Navigation";
+import Session from "./Session";
 import logo from "assets/img/logo.svg";
 import navigationPages from "./navigation-pages";
 /*import Countdown from "./Countdown";
@@ -13,10 +14,6 @@ const Header = ({
   speaker = { image: { url: "" }, talks: [] },
 }) => {
   const isHomePage = pathname === "/";
-  const about = speaker.about ? speaker.about.split(".")[0] + "." : "";
-  const talk = speaker.talks.length
-    ? speaker.talks[0]
-    : { title: "", description: "" };
 
   return isHomePage ? (
     <header className={isHomePage ? "header header_index" : "header"}>
@@ -49,24 +46,7 @@ const Header = ({
           <address className="header--location">Helsinki, Finland</address>
         </section>
 
-        <section className="header--speaker">
-          <div className="header--speaker-background" />
-          <h3 className="header--speaker-header">Featuring</h3>
-          <img
-            className="header--speaker-image"
-            src={speaker.image.url}
-            alt={speaker.name}
-          />
-          <div className="header--speaker-name">{speaker.name}</div>
-          <div className="header--speaker-about">{about}</div>
-        </section>
-
-        <section className="header--topic">
-          <div className="header--topic-background" />
-          <h3 className="header--topic-header">Topic</h3>
-          <div className="header--topic-title">{talk.title}</div>
-          <div className="header--topic-description">{talk.description}</div>
-        </section>
+        <Session speaker={speaker} type="talks" />
         {/*<Interactive
           id="components/Countdown.js"
           component={Countdown}
