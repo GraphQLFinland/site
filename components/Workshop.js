@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { AnchorHeader, Markdown, SessionSpeakers } from "components";
+import { AnchorHeader, Session } from "components";
 
 const Workshop = ({
   speakers,
@@ -9,19 +9,19 @@ const Workshop = ({
   location,
   headerLevel = 2,
 }) => (
-  <div className="workshop">
-    <AnchorHeader level={headerLevel}>
-      {title || "To be announced."}
-    </AnchorHeader>
+  <div className="workshop grid grid_6col">
+    <Session
+      speaker={speakers[0]}
+      session={{ title, description }}
+      titles={{ speaker: "Speaker", session: "Workshop" }}
+    />
 
-    <SessionSpeakers speakers={speakers} />
+    <div className="location">
+      <AnchorHeader level={headerLevel + 1}>Location</AnchorHeader>
 
-    {description ? <Markdown source={description} /> : "To be announced."}
-
-    <AnchorHeader level={headerLevel + 1}>Location</AnchorHeader>
-
-    <div>
-      {location.name} - {location.address}, {location.city}
+      <span>
+        {location.name} - {location.address}, {location.city}
+      </span>
     </div>
   </div>
 );

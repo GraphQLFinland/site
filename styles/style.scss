@@ -59,6 +59,7 @@ body {
 
 main {
   overflow: hidden; // Do not let bleeding images create horizontal scroll
+  background: #f5dde9;
 }
 
 a {
@@ -229,7 +230,7 @@ address {
   color: #f3f7f9;
   background-image: linear-gradient(
       rgb(243, 153, 153),
-      rgba($color-accent, 0.99)
+      rgba($color-accent, 0.9)
     ),
     url("../assets/img/headers/front.svg");
   background-size: 100% 100%, $header-background-size $header-background-size;

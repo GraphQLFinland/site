@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Contacts, Workshop, connect } from "components";
 
+import "../styles/workshops.scss";
+
 const Workshops = ({ conference: { workshops = [] } = {} }) => (
-  <div className="grid grid--5col">
-    <Contacts items={workshops} render={Workshop} />
-  </div>
+  <Contacts items={workshops} render={Workshop} />
 );
 Workshops.propTypes = {
   conference: PropTypes.object,

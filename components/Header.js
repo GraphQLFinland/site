@@ -14,6 +14,9 @@ const Header = ({
   speaker = { image: { url: "" }, talks: [] },
 }) => {
   const isHomePage = pathname === "/";
+  const session = speaker.talks.length
+    ? speaker.talks[0]
+    : { title: "", description: "" };
 
   return isHomePage ? (
     <header className={isHomePage ? "header header_index" : "header"}>
@@ -46,7 +49,11 @@ const Header = ({
           <address className="header--location">Helsinki, Finland</address>
         </section>
 
-        <Session speaker={speaker} type="talks" />
+        <Session
+          speaker={speaker}
+          session={session}
+          titles={{ speaker: "Featuring", session: "Topic" }}
+        />
         {/*<Interactive
           id="components/Countdown.js"
           component={Countdown}

@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+.workshop {
+  grid-column: 1 / span 6;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  .session--topic {
+    margin-top: 0;
+  }
+
+  .location {
+    background: white;
+    padding: 1em;
+    margin-top: -50%;
+    grid-row: 2;
+    grid-column: 1 / span 2;
+
+    .heading {
+      margin-top: 0;
+    }
+  }
+
+  .session--topic-background::before {
+    width: 250px;
+    height: 200px;
+  }
+}
