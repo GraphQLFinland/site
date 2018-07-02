@@ -8,7 +8,6 @@ const Workshop = ({
   description,
   location,
   headerLevel = 2,
-  tickets,
 }) => (
   <div className="workshop">
     <AnchorHeader level={headerLevel}>
@@ -32,7 +31,6 @@ Workshop.propTypes = {
   description: PropTypes.string,
   headerLevel: PropTypes.number,
   location: PropTypes.object,
-  tickets: PropTypes.array,
 };
 
 export default Workshop;
