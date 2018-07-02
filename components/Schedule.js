@@ -5,7 +5,7 @@ import Markdown from "./Markdown";
 import Keywords from "./Keywords";
 import SessionSpeakers from "./SessionSpeakers";
 
-const Schedule = ({ items: { intervals = [] } = {} }) => (
+const Schedule = ({ intervals }) => (
   <dl className="schedule">
     {intervals.map(({ begin, end, sessions }, i) => [
       <dt key={`dt-${i}`}>
@@ -16,7 +16,12 @@ const Schedule = ({ items: { intervals = [] } = {} }) => (
           <div className="session" key={`session-${i}`}>
             <AnchorHeader level={3} anchor={title} key={`title-${i}`}>
               {title} {title && speakers && "—"}{" "}
-              <SessionSpeakers key={`speaker-names-${i}`} speakers={speakers} />
+              {speakers && (
+                <SessionSpeakers
+                  key={`speaker-names-${i}`}
+                  speakers={speakers}
+                />
+              )}
             </AnchorHeader>
             {description && (
               <Markdown key={`description-${i}`} source={description} />
