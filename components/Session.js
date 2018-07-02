@@ -8,8 +8,6 @@ const Session = ({
   session,
   titles = { speaker: null, session: null },
 }) => {
-  const about = speaker.about ? speaker.about.split(".")[0] + "." : "";
-
   return (
     <>
       <section className="session--speaker">
@@ -23,7 +21,7 @@ const Session = ({
           alt={speaker.name}
         />
         <div className="session--speaker-name">{speaker.name}</div>
-        <div className="session--speaker-about">{about}</div>
+        <div className="session--speaker-about">{speaker.aboutShort}</div>
       </section>
 
       <section className="session--topic">
@@ -31,7 +29,7 @@ const Session = ({
         {titles.session && (
           <h3 className="session--topic-header">{titles.session}</h3>
         )}
-        <h4 className="session--topic-title">{session.title}</h4>
+        <h4 className="session--topic-title">{session.title}</h4>#
         <div className="session--topic-description">
           <Markdown source={session.description} />
         </div>

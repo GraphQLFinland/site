@@ -154,6 +154,7 @@ export default hot(module)(
       contact(contactName: "Ivan Goncharov", conferenceId: $conferenceId) {
         name
         about
+        aboutShort
         image {
           url
         }
