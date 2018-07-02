@@ -29,7 +29,7 @@ const Session = ({
         {titles.session && (
           <h3 className="session--topic-header">{titles.session}</h3>
         )}
-        <h4 className="session--topic-title">{session.title}</h4>#
+        <h4 className="session--topic-title">{session.title}</h4>
         <div className="session--topic-description">
           <Markdown source={session.description} />
         </div>
