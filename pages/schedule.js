@@ -19,9 +19,11 @@ const Schedule = ({ conference }) => {
         <aside className="intro--aside" />
       </section>
       <div className="grid--5col" id="schedule">
-        {conference.schedules.map(({ day, intervals }) => (
+        {conference.schedules.map(({ day, description, intervals }) => (
           <>
-            <h2>{day}</h2>
+            <h2>
+              {day} {" - "} {description}
+            </h2>
             <ScheduleComp intervals={intervals} />
           </>
         ))}
@@ -35,6 +37,7 @@ export default connect(`
     conference(id: $conferenceId) {
       schedules {
         day
+        description
         intervals {
           begin
           end
