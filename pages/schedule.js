@@ -20,12 +20,12 @@ const Schedule = ({ conference }) => {
       </section>
       <div className="grid--5col" id="schedule">
         {conference.schedules.map(({ day, description, intervals }) => (
-          <>
+          <React.Fragment key={day}>
             <h2>
               {day} {" - "} {description}
             </h2>
             <ScheduleComp intervals={intervals} />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </>
