@@ -48,7 +48,7 @@ const Schedule = ({ intervals }) => (
   </dl>
 );
 Schedule.propTypes = {
-  items: PropTypes.object,
+  intervals: PropTypes.object,
 };
 
 export default Schedule;
