@@ -21,7 +21,7 @@ const TYPES = {
 const Schedule = ({ intervals }) => (
   <dl className="schedule">
     {intervals.map(({ begin, end, sessions }, i) => [
-      <dt key={`dt-${i}`}>
+      <dt key={`dt-${i}`} className={getType(sessions)}>
         {begin}–{end}
       </dt>,
       <dd key={`dd-${i}`}>
@@ -50,5 +50,10 @@ const Schedule = ({ intervals }) => (
 Schedule.propTypes = {
   intervals: PropTypes.object,
 };
+
+// TODO: If there are multiple sessions, how to resolve type? -> mixed?
+function getType(sessions) {
+  return sessions.length && sessions[0].type.toLowerCase();
+}
 
 export default Schedule;
