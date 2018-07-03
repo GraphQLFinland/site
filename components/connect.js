@@ -10,16 +10,20 @@ function connect(query, propsToVars) {
       constructor(props) {
         super(props);
 
-        this.state = { data: queryCache || {} };
+        this.state = { data: queryCache || null };
       }
       componentDidMount() {
         this.fetchData().then(data => this.setState(() => data));
       }
       render() {
-        return React.createElement(component, {
-          ...this.props,
-          ...this.state.data,
-        });
+        if (this.state.data === null) {
+          return null;
+        } else {
+          return React.createElement(component, {
+            ...this.props,
+            ...this.state.data,
+          });
+        }
       }
       fetchData() {
         let variables = {

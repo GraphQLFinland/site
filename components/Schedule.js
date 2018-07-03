@@ -10,6 +10,12 @@ const TYPES = {
   LIGHTNING_TALK: "⚡️",
   PRESENTATION: "🎙",
   WORKSHOP: "👩‍💻",
+  COFFEE_BREAK: "☕",
+  BREAKFAST: "🥐",
+  LUNCH: "🍽️",
+  ORGANIZATIONAL: "💤",
+  PANEL: "🙋",
+  PARTY: "🎉",
 };
 
 const Schedule = ({ intervals }) => (
