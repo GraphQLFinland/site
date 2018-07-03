@@ -11,8 +11,8 @@ export default [
         url: "/",
       },
       {
-        title: "Tickets",
-        url: "/#tickets",
+        title: "Schedule",
+        url: "/schedule/",
       },
       {
         title: "Speakers",
@@ -21,6 +21,10 @@ export default [
       {
         title: "Workshops",
         url: "/workshops/",
+      },
+      {
+        title: "Tickets",
+        url: "/#tickets",
       },
       {
         title: "About",
