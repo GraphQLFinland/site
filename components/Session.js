@@ -1,4 +1,5 @@
 import React from "react";
+import ReactCountryFlag from "react-country-flag";
 import { Markdown } from "components";
 import { AnchorHeader } from "components";
 
@@ -20,7 +21,18 @@ const Session = ({ speaker, sessions, titles = { speaker: null } }) => {
             src={speaker.image.url}
             alt={speaker.name}
           />
-          <div className="session--speaker-name">{speaker.name}</div>
+          <div className="session--speaker-name-and-country">
+            {speaker.country && (
+              <span className="session--speaker-country">
+                <ReactCountryFlag
+                  code={speaker.country.code}
+                  flagProps={{ verticalAlign: "top" }}
+                  svg
+                />
+              </span>
+            )}
+            <span className="session--speaker-name">{speaker.name}</span>
+          </div>
           <div className="session--speaker-about">{speaker.aboutShort}</div>
           {social && (
             <div className="session--speaker-social">

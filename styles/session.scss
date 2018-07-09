@@ -63,12 +63,17 @@
       max-width: 200px;
       position: relative;
     }
-    &-name {
+    &-name-and-country {
       background-color: rgba(255, 255, 255, 0.5);
       color: $color-accent;
       padding-top: 1em;
       padding-left: 1em;
       position: relative;
+    }
+    &-country {
+      margin-right: 0.5em;
+    }
+    &-name {
     }
     &-about {
       background-color: rgba(255, 255, 255, 0.5);
