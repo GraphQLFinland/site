@@ -3,37 +3,6 @@ import React from "react";
 export default [
   {
     props: {
-      className: "nav--main",
-    },
-    links: [
-      {
-        title: "Intro",
-        url: "/",
-      },
-      {
-        title: "Schedule",
-        url: "/schedule/",
-      },
-      {
-        title: "Speakers",
-        url: "/speakers/",
-      },
-      {
-        title: "Workshops",
-        url: "/workshops/",
-      },
-      {
-        title: "Tickets",
-        url: "/#tickets",
-      },
-      {
-        title: "About",
-        url: "/about/",
-      },
-    ],
-  },
-  {
-    props: {
       className: "nav--social",
     },
     links: [
@@ -70,6 +39,29 @@ export default [
   },
   {
     props: {
+      className: "nav--main",
+    },
+    links: [
+      {
+        title: "Intro",
+        url: "/",
+      },
+      {
+        title: "Schedule",
+        url: "/schedule/",
+      },
+      {
+        title: "Speakers",
+        url: "/speakers/",
+      },
+      {
+        title: "Workshops",
+        url: "/workshops/",
+      },
+    ],
+  },
+  {
+    props: {
       className: "nav--secondary",
     },
     links: [
@@ -80,6 +72,14 @@ export default [
       {
         title: "For Sponsors",
         url: "/for-sponsors/",
+      },
+      {
+        title: "About",
+        url: "/about/",
+      },
+      {
+        title: "Tickets",
+        url: "/#tickets",
       },
     ],
   },
