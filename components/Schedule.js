@@ -59,13 +59,19 @@ const Schedule = ({ intervals }) => (
   </dl>
 );
 Schedule.propTypes = {
-  intervals: PropTypes.object,
+  intervals: PropTypes.array,
 };
 
 // TODO: If there are multiple sessions, how to resolve type? -> mixed?
 function getType(sessions) {
   return sessions.length && sessions[0].type.toLowerCase();
 }
+
+const titlePropTypes = {
+  title: PropTypes.string,
+  type: PropTypes.string,
+  speakers: PropTypes.array,
+};
 
 const WorkshopTitle = ({ title, type, speakers }) => (
   <AnchorHeader level={3} anchor={title}>
@@ -75,6 +81,7 @@ const WorkshopTitle = ({ title, type, speakers }) => (
     {speakers && <SessionSpeakers key={`speaker-names`} speakers={speakers} />}
   </AnchorHeader>
 );
+WorkshopTitle.propTypes = titlePropTypes;
 
 const AnchorTitle = ({ title, type, speakers }) => (
   <AnchorHeader level={3} anchor={title}>
@@ -83,5 +90,6 @@ const AnchorTitle = ({ title, type, speakers }) => (
     {speakers && <SessionSpeakers key={`speaker-names`} speakers={speakers} />}
   </AnchorHeader>
 );
+AnchorTitle.propTypes = titlePropTypes;
 
 export default Schedule;
