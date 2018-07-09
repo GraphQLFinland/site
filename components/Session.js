@@ -26,7 +26,7 @@ const Session = ({ speaker, sessions, titles = { speaker: null } }) => {
               <span className="session--speaker-country">
                 <ReactCountryFlag
                   code={speaker.country.code}
-                  flagProps={{ verticalAlign: "top" }}
+                  styleProps={{ verticalAlign: "top" }}
                   svg
                 />
               </span>
