@@ -37,8 +37,8 @@ We are offering the perfect spot for companies to promote their knowledge and pr
 | Logo on slides between the talks | &#10003; | &#10003; | &#10003;
 | Job announcements | | &#10003; | &#10003;
 | Branded booth | | | &#10003;
-| Item in the goodie bag | | | &#10003;
-| Attendance for the speaker events (e.g. the speakers dinner) | | &#9786; | &#9786; &#9786;
+| Item in the goodie bag | sticker | sticker | &#10003;
+| Attendance for the speaker events (e.g. the speakers dinner) | | | &#9786;
 | Special requests | | | &#10003;
 
 ## How to Sponsor?
