@@ -43,18 +43,20 @@
 
     &-background::before {
       content: " ";
-      width: 225px;
+      width: 300px;
       margin-left: -54px;
-      height: 200px;
+      height: 260px;
       position: absolute;
       background: url("../assets/img/hex.svg");
       background-size: 100%;
+      background-repeat: no-repeat;
     }
     &-header {
       text-transform: uppercase;
       margin-top: 0.5em;
       margin-left: 0;
       position: relative;
+      padding-left: 2em;
     }
     &-image {
       background-color: rgba(255, 255, 255, 0.5);
@@ -94,12 +96,13 @@
   &--topic {
     &-background::before {
       content: " ";
-      width: 200px;
+      width: 250px;
       margin-left: -48px;
-      height: 170px;
+      height: 215px;
       position: absolute;
       background: url("../assets/img/hex.svg");
       background-size: 100%;
+      background-repeat: no-repeat;
     }
     &-header {
       text-transform: uppercase;
