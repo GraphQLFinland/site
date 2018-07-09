@@ -1,29 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Contact, Contacts } from "components";
-import Talk from "./Talk.js";
+import { Session } from "components";
 
 const Speaker = ({ talks, workshops, ...contact }) => (
-  <Contact {...contact}>
-    {talks && (
-      <div className="speaker-talks">
-        <Contacts
-          items={talks}
-          render={Talk}
-          renderProps={{ headerLevel: 3 }}
-        />
-      </div>
-    )}
-    {workshops && (
-      <div className="speaker-workshops">
-        <Contacts
-          items={workshops}
-          render={Talk}
-          renderProps={{ headerLevel: 3 }}
-        />
-      </div>
-    )}
-  </Contact>
+  <div className="sessions grid grid_6col">
+    <Session
+      speaker={contact}
+      titles={{ speaker: "Speaker" }}
+      sessions={[{ header: "About", description: contact.about }]
+        .concat(talks.map(talk => ({ header: "Talk", ...talk })))
+        .concat(workshops.map(talk => ({ header: "Workshop", ...talk })))}
+    />
+  </div>
 );
 
 Speaker.propTypes = {

@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { Session } from "components";
 
 const Workshop = ({ speakers, title, description }) => (
-  <div className="workshop grid grid_6col">
+  <div className="sessions grid grid_6col">
     <Session
       speaker={speakers[0]}
-      session={{ title, description }}
+      sessions={[{ title, description }]}
       titles={{ speaker: "Speaker", session: "Workshop" }}
     />
   </div>

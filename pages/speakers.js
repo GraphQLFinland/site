@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import { Contacts, Speaker, connect } from "components";
 
 const Speakers = ({ conference: { speakers = [] } = {} }) => (
-  <div className="grid--5col" id="schedule">
-    <Contacts className="speakers" items={speakers} render={Speaker} />
-  </div>
+  <Contacts className="speakers" items={speakers} render={Speaker} />
 );
 Speakers.propTypes = {
   conference: PropTypes.object,

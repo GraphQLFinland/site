@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Contacts, Workshop, connect } from "components";
 
-import "../styles/workshops.scss";
-
 const Workshops = ({ conference: { workshops = [] } = {} }) => (
   <Contacts items={workshops} render={Workshop} />
 );
@@ -18,8 +16,15 @@ export default connect(`
         speakers {
           name
           about
+          aboutShort
           image {
             url
+          }
+          social {
+            homepage
+            github
+            twitter
+            linkedin
           }
         }
         title
