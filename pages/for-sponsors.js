@@ -31,7 +31,7 @@ We are offering the perfect spot for companies to promote their knowledge and pr
 | Conference tickets | 2 x &#9786; | 4 x &#9786; | 6 x &#9786;
 | Visibility on social media and website | &#9786; | &#9786; &#9786; | &#9786; &#9786; &#9786;
 | Logo size on website and app | &#9786; | &#9786; &#9786; | &#9786; &#9786; &#9786;
-| Banner in conference | &#10003; | &#10003; | &#10003;
+| Banner in conference | | &#10003; | &#10003;
 | Banner on stage | | | &#10003;
 | Speaker area access | &#10003; | &#10003; | &#10003;
 | Logo on slides between the talks | &#10003; | &#10003; | &#10003;
