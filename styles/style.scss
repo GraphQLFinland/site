@@ -240,6 +240,12 @@ figure {
       margin-bottom: $pu2;
     }
   }
+
+  abbr {
+    margin-right: 0.5em;
+    border: none;
+    text-decoration: none;
+  }
 }
 
 .glossary {

@@ -4,20 +4,8 @@ import AnchorHeader from "./AnchorHeader";
 import Markdown from "./Markdown";
 import Keywords from "./Keywords";
 import SessionSpeakers from "./SessionSpeakers";
+import scheduleTypes from "./schedule-types";
 import slugify from "../utils/slugify";
-
-const TYPES = {
-  KEYNOTE: "🗝",
-  LIGHTNING_TALK: "⚡️",
-  PRESENTATION: "🎙",
-  WORKSHOP: "👩‍💻",
-  COFFEE_BREAK: "☕",
-  BREAKFAST: "🥐",
-  LUNCH: "🍽️",
-  ORGANIZATIONAL: "💤",
-  PANEL: "🙋",
-  PARTY: "🎉",
-};
 
 const Schedule = ({ intervals }) => (
   <dl className="schedule">
@@ -75,7 +63,9 @@ const titlePropTypes = {
 
 const WorkshopTitle = ({ title, type, speakers }) => (
   <AnchorHeader level={3} anchor={title}>
-    {TYPES[type] && <span title={type}>{TYPES[type]} </span>}
+    {scheduleTypes[type] && (
+      <abbr title={scheduleTypes[type].title}>{scheduleTypes[type].icon}</abbr>
+    )}
     <a href={`/workshops#${slugify(title)}`}>{title}</a>{" "}
     {title && speakers && "—"}{" "}
     {speakers && <SessionSpeakers key={`speaker-names`} speakers={speakers} />}
@@ -85,7 +75,9 @@ WorkshopTitle.propTypes = titlePropTypes;
 
 const AnchorTitle = ({ title, type, speakers }) => (
   <AnchorHeader level={3} anchor={title}>
-    {TYPES[type] && <span title={type}>{TYPES[type]} </span>}
+    {scheduleTypes[type] && (
+      <abbr title={scheduleTypes[type].title}>{scheduleTypes[type].icon}</abbr>
+    )}
     {title} {title && speakers && "—"}{" "}
     {speakers && <SessionSpeakers key={`speaker-names`} speakers={speakers} />}
   </AnchorHeader>
