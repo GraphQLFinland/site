@@ -75,9 +75,7 @@ There's a direct train from the airport to Helsinki center. HSL operates the loc
 * We speak Finnish, English, and Swedish (poorly most often). [Check out our brief guide to Finnish](https://medium.com/react-finland/brief-guide-to-finnish-7f43f37d5017) in order to surprise the locals.
 * We use euro as our currency.
 * Finland is generally considered a safe country. Do **not** try to go past people in the grill queue, through, as that's a common way to find yourself in a trouble.
-* Finland has about 5.5 million residents. That's about 1.6 times the population of Berlin spread around a big area. Whole Germany has roughly the same land area.
-* Some Finns don't like if you tell them Finland is a part of Scandinavia. Other Scandinavians also don't like when you tell them that Finland is part of Scandinavia. It's complicated. You can all us all *Nordics*. Don't tell Estonia.
-  `}
+* Finland has about 5.5 million residents. That's about 1.6 times the population of Berlin spread around a big area. Whole Germany has roughly the same land area.`}
       />
     </div>
   </>

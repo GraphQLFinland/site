@@ -108,6 +108,42 @@ h3 {
   }
 }
 
+.text,
+.heading {
+  z-index: 2;
+  position: relative;
+}
+
+.main-container table,
+.main-container .sponsors,
+.main-container p,
+.main-container dl,
+.main-container ul,
+.main-container ol {
+  padding: 1em;
+  position: relative;
+  background-color: white;
+  z-index: 0;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    margin-left: -2em;
+    margin-top: -1.6em;
+    height: 83px;
+    background: url("../assets/img/hex.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+ul,
+ol {
+  padding-left: 2em !important;
+}
+
 blockquote {
   padding: $pu2;
   margin: $pu * 3;
@@ -194,17 +230,7 @@ figure {
   &--definition {
     position: relative;
     margin: 0;
-    @media (min-width: $mobile-breakpoint) {
-      &::after {
-        position: absolute;
-        top: 0;
-        left: -20px;
-        height: 100%;
-        width: 2px;
-        background-color: #ddd;
-        content: "";
-      }
-    }
+
     h3 {
       margin-top: 0;
       margin-bottom: 0;
