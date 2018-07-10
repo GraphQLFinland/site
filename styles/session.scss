@@ -63,28 +63,23 @@
       max-width: 200px;
       position: relative;
     }
-    &-name-and-country {
+    &-info {
       background-color: rgba(255, 255, 255, 0.5);
-      color: $color-accent;
       padding-top: 1em;
       padding-left: 1em;
-      position: relative;
+      padding-bottom: 1em;
     }
     &-country {
       margin-right: 0.5em;
     }
     &-name {
+      display: inline;
     }
     &-about {
-      background-color: rgba(255, 255, 255, 0.5);
       padding: 1em;
       position: relative;
     }
     &-social {
-      background-color: rgba(255, 255, 255, 0.5);
-      padding-left: 1em;
-      padding-right: 1em;
-      padding-bottom: 1em;
       position: relative;
     }
   }

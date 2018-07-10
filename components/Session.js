@@ -21,46 +21,52 @@ const Session = ({ speaker, sessions, titles = { speaker: null } }) => {
             src={speaker.image.url}
             alt={speaker.name}
           />
-          <div className="session--speaker-name-and-country">
-            {speaker.country && (
-              <span className="session--speaker-country">
-                <ReactCountryFlag
-                  code={speaker.country.code}
-                  styleProps={{ verticalAlign: "top" }}
-                  svg
-                />
-              </span>
+          <div className="session--speaker-info">
+            <AnchorHeader
+              level={4}
+              anchor={speaker.name}
+              className="session--speaker-name"
+            >
+              {speaker.country && (
+                <span className="session--speaker-country">
+                  <ReactCountryFlag
+                    code={speaker.country.code}
+                    styleProps={{ verticalAlign: "top" }}
+                    svg
+                  />
+                </span>
+              )}
+              {speaker.name}
+            </AnchorHeader>
+            <div className="session--speaker-about">{speaker.aboutShort}</div>
+            {social && (
+              <div className="session--speaker-social">
+                {social.homepage && (
+                  <a href={social.homepage}>
+                    <i className="icon-home" />
+                  </a>
+                )}
+
+                {social.github && (
+                  <a href={social.github}>
+                    <i className="icon-github-circled" />
+                  </a>
+                )}
+
+                {social.twitter && (
+                  <a href={social.twitter}>
+                    <i className="icon-twitter" />
+                  </a>
+                )}
+
+                {social.linkedin && (
+                  <a href={social.linkedin}>
+                    <i className="icon-linkedin-squared" />
+                  </a>
+                )}
+              </div>
             )}
-            <span className="session--speaker-name">{speaker.name}</span>
           </div>
-          <div className="session--speaker-about">{speaker.aboutShort}</div>
-          {social && (
-            <div className="session--speaker-social">
-              {social.homepage && (
-                <a href={social.homepage}>
-                  <i className="icon-home" />
-                </a>
-              )}
-
-              {social.github && (
-                <a href={social.github}>
-                  <i className="icon-github-circled" />
-                </a>
-              )}
-
-              {social.twitter && (
-                <a href={social.twitter}>
-                  <i className="icon-twitter" />
-                </a>
-              )}
-
-              {social.linkedin && (
-                <a href={social.linkedin}>
-                  <i className="icon-linkedin-squared" />
-                </a>
-              )}
-            </div>
-          )}
         </section>
       )}
 
