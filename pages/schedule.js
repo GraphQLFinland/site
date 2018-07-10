@@ -1,5 +1,10 @@
 import React from "react";
-import { Markdown, Schedule as ScheduleComp, connect } from "components";
+import {
+  Markdown,
+  Schedule as ScheduleComp,
+  ScheduleLegend,
+  connect,
+} from "components";
 
 const Schedule = ({ conference }) => {
   if (!conference) {
@@ -19,6 +24,7 @@ const Schedule = ({ conference }) => {
         <aside className="intro--aside" />
       </section>
       <div className="grid--5col" id="schedule">
+        <ScheduleLegend />
         {conference.schedules.map(({ day, description, intervals }) => (
           <React.Fragment key={day}>
             <h2>

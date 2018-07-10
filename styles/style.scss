@@ -62,6 +62,11 @@ main {
   background: #f5dde9;
 }
 
+abbr {
+  border: none;
+  text-decoration: none;
+}
+
 a {
   color: $very-blue;
 }
@@ -182,6 +187,23 @@ figure {
   margin: 0;
 }
 
+#schedule {
+  .legend {
+    label {
+      margin-right: 1.5em;
+      display: inline-block;
+
+      .title {
+        white-space: nowrap;
+      }
+    }
+
+    abbr {
+      margin-right: 0.25em;
+    }
+  }
+}
+
 .schedule {
   position: relative;
 
@@ -243,8 +265,6 @@ figure {
 
   abbr {
     margin-right: 0.5em;
-    border: none;
-    text-decoration: none;
   }
 }
 
