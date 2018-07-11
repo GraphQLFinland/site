@@ -296,6 +296,11 @@ address {
   &--5col {
     grid-column: 2 / span 5;
   }
+  &--full-mobile {
+    @media (max-width: $mobile-breakpoint) {
+      grid-column: 1 / span 6;
+    }
+  }
 }
 
 .header {

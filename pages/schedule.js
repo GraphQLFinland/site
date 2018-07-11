@@ -23,7 +23,7 @@ const Schedule = ({ conference }) => {
         </div>
         <aside className="intro--aside" />
       </section>
-      <div className="grid--5col" id="schedule">
+      <div className="grid--5col grid--full-mobile" id="schedule">
         <ScheduleLegend />
         {conference.schedules.map(({ day, description, intervals }) => (
           <React.Fragment key={day}>
