@@ -56,8 +56,8 @@ const SiteBody = (
         <div className="main-container container">
           <section className="grid grid_6col">
             {children}
-            {/* <div className="grid--full">
-              <div className="sponsors sponsors_gold">
+            {/* <div className="grid--full"> */}
+            {/* <div className="sponsors sponsors_gold">
                 <AnchorHeader className="sponsors--heading" level={2}>
                   🥇 Gold Sponsors
                 </AnchorHeader>
@@ -78,23 +78,17 @@ const SiteBody = (
                     <a href="/for-sponsors/">Become a sponsor</a>
                   )}
                 </section>
-              </div>
+              </div> */}
 
-              <div className="sponsors sponsors_bronze">
-                <AnchorHeader className="sponsors--heading" level={2}>
-                  🥉 Bronze Sponsors
-                </AnchorHeader>
-                <section className="sponsors--list">
-                  <Contacts
-                    items={tweakSponsors.bronze(bronzeSponsors)}
-                    render={Sponsor}
-                  />
-                  {bronzeSponsors.length < 4 && (
-                    <a href="/for-sponsors/">Become a sponsor</a>
-                  )}
-                </section>
-              </div>
-            </div> */}
+            <AnchorHeader level={2}>🥉 Bronze Sponsors</AnchorHeader>
+            <div className="sponsors sponsors_bronze  grid--full">
+              <section className="sponsors--list">
+                <Contacts
+                  items={tweakSponsors.bronze(bronzeSponsors)}
+                  render={Sponsor}
+                />
+              </section>
+            </div>
 
             <AnchorHeader level={2}>Partners</AnchorHeader>
             <div className="sponsors sponsors_partners grid--full">
@@ -151,7 +145,7 @@ export default hot(module)(
         }
       }
 
-      contact(contactName: "Ivan Goncharov", conferenceId: $conferenceId) {
+      contact(contactName: "Johannes Schickling", conferenceId: $conferenceId) {
         name
         about
         aboutShort
