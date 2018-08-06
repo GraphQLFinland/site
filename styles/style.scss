@@ -129,7 +129,12 @@ h3 {
   position: relative;
   background-color: white;
   z-index: 0;
+}
 
+.main-container table,
+.main-container dl,
+.main-container ul,
+.main-container ol {
   &::before {
     content: " ";
     position: absolute;
