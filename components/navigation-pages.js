@@ -73,6 +73,13 @@ export default [
         title: "For Sponsors",
         url: "/for-sponsors/",
       },
+    ],
+  },
+  {
+    props: {
+      className: "nav--tertiary",
+    },
+    links: [
       {
         title: "About",
         url: "/about/",
