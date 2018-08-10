@@ -133,7 +133,7 @@ function buildConfig() {
       }),
       new RedirectWebpackPlugin({
         redirects: {
-          organizers: "/about/",
+          about: "/organizers/",
           presentations: "/speakers/",
           talks: "/speakers/",
           schedule: "/2018/schedule/",

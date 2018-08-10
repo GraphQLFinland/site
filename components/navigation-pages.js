@@ -51,12 +51,12 @@ export default [
         url: "/schedule/",
       },
       {
-        title: "Speakers",
-        url: "/speakers/",
-      },
-      {
         title: "Workshops",
         url: "/workshops/",
+      },
+      {
+        title: "Tickets",
+        url: "/#tickets",
       },
     ],
   },
@@ -66,12 +66,16 @@ export default [
     },
     links: [
       {
-        title: "For Attendees",
-        url: "/for-attendees/",
+        title: "Speakers",
+        url: "/speakers/",
       },
       {
-        title: "For Sponsors",
-        url: "/for-sponsors/",
+        title: "Sponsors",
+        url: "/sponsors/",
+      },
+      {
+        title: "Organizers",
+        url: "/about/",
       },
     ],
   },
@@ -81,12 +85,12 @@ export default [
     },
     links: [
       {
-        title: "About",
-        url: "/about/",
+        title: "For Attendees",
+        url: "/for-attendees/",
       },
       {
-        title: "Tickets",
-        url: "/#tickets",
+        title: "For Sponsors",
+        url: "/for-sponsors/",
       },
     ],
   },

@@ -5,9 +5,9 @@ import { Session } from "components";
 const Workshop = ({ speakers, title, description }) => (
   <div className="sessions grid grid_6col">
     <Session
-      speaker={speakers[0]}
+      contact={speakers[0]}
       sessions={[{ title, description }]}
-      titles={{ speaker: "Speaker", session: "Workshop" }}
+      titles={{ contact: "Speaker", session: "Workshop" }}
     />
   </div>
 );

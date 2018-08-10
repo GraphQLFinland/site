@@ -54,49 +54,51 @@ const SiteBody = (
       <main>
         <Header pathname={pathname} title={title} speaker={speaker} />
         <div className="main-container container">
-          <section className="grid grid_6col">
-            {children}
-            {/* <div className="grid--full"> */}
-            {/* <div className="sponsors sponsors_gold">
-                <AnchorHeader className="sponsors--heading" level={2}>
-                  🥇 Gold Sponsors
-                </AnchorHeader>
+          <section className="grid grid_6col">{children}</section>
+          {pathname !== "/sponsors/" && (
+            <section className="grid grid_6col">
+              {/* <div className="grid--full"> */}
+              {/* <div className="sponsors sponsors_gold">
+              <AnchorHeader className="sponsors--heading" level={2}>
+                🥇 Gold Sponsors
+              </AnchorHeader>
+              <section className="sponsors--list">
+                <Contacts items={goldSponsors} render={Sponsor} />
+                {goldSponsors.length < 2 && (
+                  <a href="/for-sponsors/">Become a sponsor</a>
+                )}
+              </section>
+            </div>
+            <div className="sponsors sponsors_silver">
+              <AnchorHeader className="sponsors--heading" level={2}>
+                🥈 Silver Sponsors
+              </AnchorHeader>
+              <section className="sponsors--list">
+                <Contacts items={silverSponsors} render={Sponsor} />
+                {silverSponsors.length < 3 && (
+                  <a href="/for-sponsors/">Become a sponsor</a>
+                )}
+              </section>
+            </div> */}
+
+              <AnchorHeader level={2}>🥉 Bronze Sponsors</AnchorHeader>
+              <div className="sponsors sponsors_bronze grid--full">
                 <section className="sponsors--list">
-                  <Contacts items={goldSponsors} render={Sponsor} />
-                  {goldSponsors.length < 2 && (
-                    <a href="/for-sponsors/">Become a sponsor</a>
-                  )}
+                  <Contacts
+                    items={tweakSponsors.bronze(bronzeSponsors)}
+                    render={Sponsor}
+                  />
                 </section>
               </div>
-              <div className="sponsors sponsors_silver">
-                <AnchorHeader className="sponsors--heading" level={2}>
-                  🥈 Silver Sponsors
-                </AnchorHeader>
+
+              <AnchorHeader level={2}>Partners</AnchorHeader>
+              <div className="sponsors sponsors_partners grid--full">
                 <section className="sponsors--list">
-                  <Contacts items={silverSponsors} render={Sponsor} />
-                  {silverSponsors.length < 3 && (
-                    <a href="/for-sponsors/">Become a sponsor</a>
-                  )}
+                  <Contacts items={partners} render={Sponsor} />
                 </section>
-              </div> */}
-
-            <AnchorHeader level={2}>🥉 Bronze Sponsors</AnchorHeader>
-            <div className="sponsors sponsors_bronze  grid--full">
-              <section className="sponsors--list">
-                <Contacts
-                  items={tweakSponsors.bronze(bronzeSponsors)}
-                  render={Sponsor}
-                />
-              </section>
-            </div>
-
-            <AnchorHeader level={2}>Partners</AnchorHeader>
-            <div className="sponsors sponsors_partners grid--full">
-              <section className="sponsors--list">
-                <Contacts items={partners} render={Sponsor} />
-              </section>
-            </div>
-          </section>
+              </div>
+            </section>
+          )}
         </div>
         <Subscribe list="https://react-finland.us16.list-manage.com/subscribe/post?u=a940d62db3f360204bf40b1c4&amp;id=7cb74ccf50" />
         <Footer />
@@ -108,10 +110,13 @@ SiteBody.propTypes = {
   children: PropTypes.node,
   location: PropTypes.object,
   page: PropTypes.object,
-  partners: PropTypes.array,
-  goldSponsors: PropTypes.array,
-  silverSponsors: PropTypes.array,
-  bronzeSponsors: PropTypes.array,
+  conference: PropTypes.shape({
+    partners: PropTypes.array,
+    goldSponsors: PropTypes.array,
+    silverSponsors: PropTypes.array,
+    bronzeSponsors: PropTypes.array,
+  }),
+  contact: PropTypes.object,
 };
 
 const sponsorFragment = `

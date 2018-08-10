@@ -1,4 +1,5 @@
 const path = require("path");
+const EVENT_NAME = "GraphQL Finland";
 
 module.exports = {
   apiUrl: "https://api.react-finland.fi/graphql",
@@ -19,41 +20,44 @@ module.exports = {
       title: "Page not found",
     }),
     "/": page("index", {
-      title: "GraphQL Finland",
-      description:
-        "GraphQL Finland (18-19.10.2018, Helsinki) is a conference that comes with a workshop day and a day of talks.",
+      title: EVENT_NAME,
+      description: `${EVENT_NAME} (18-19.10.2018, Helsinki) is a conference that comes with a workshop day and a day of talks.`,
     }),
-    about: page("about", {
-      title: "About",
-      description: "What React Finland is about?",
+    about: page("organizers", {
+      title: "Organizers",
+      description: `Who is organizing ${EVENT_NAME}?`,
     }),
     imprint: page("imprint", {
       title: "Imprint",
-      description: "How to reach GraphQL Finland organizers?",
+      description: `How to reach ${EVENT_NAME} organizers?`,
     }),
     "privacy-policy": page("privacy-policy", {
       title: "Privacy Policy",
-      description: "What is the privacy policy of GraphQL Finland?",
+      description: `What is the privacy policy of ${EVENT_NAME}?`,
     }),
     "for-attendees": page("for-attendees", {
       title: "For Attendees",
-      description: "What should I know as a React Finland attendee?",
+      description: `What should I know as a ${EVENT_NAME} attendee`,
     }),
     "for-sponsors": page("for-sponsors", {
       title: "For Sponsors",
-      description: "What should I know as a React Finland sponsor?",
+      description: `What should I know as a ${EVENT_NAME} sponsor?`,
     }),
     speakers: page("speakers", {
       title: "Speakers",
-      speakers: "Who is going to speak?",
+      speakers: `Who is going to speak at ${EVENT_NAME}?`,
+    }),
+    sponsors: page("sponsors", {
+      title: "Sponsors",
+      speakers: `Who are sponsoring ${EVENT_NAME}?`,
     }),
     workshops: page("workshops", {
       title: "Workshops",
-      description: "Which workshops will be held?",
+      description: `Which workshops will be held at ${EVENT_NAME}?`,
     }),
     schedule: page("schedule", {
       title: "Schedule",
-      description: "Schedule of the conference",
+      description: `What is the schedule of ${EVENT_NAME}?`,
     }),
   },
 };

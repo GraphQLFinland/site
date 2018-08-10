@@ -5,40 +5,40 @@ import { AnchorHeader } from "components";
 
 import "../styles/session.scss";
 
-const Session = ({ speaker, sessions, titles = { speaker: null } }) => {
-  const social = speaker.social;
+const Session = ({ contact, sessions, titles = { contact: null } }) => {
+  const social = contact.social;
 
   return (
     <>
-      {speaker && (
+      {contact && (
         <section className="session--speaker">
           <div className="session--speaker-background" />
-          {titles.speaker && (
-            <h3 className="session--speaker-header">{titles.speaker}</h3>
+          {titles.contact && (
+            <h3 className="session--speaker-header">{titles.contact}</h3>
           )}
           <img
             className="session--speaker-image"
-            src={speaker.image.url}
-            alt={speaker.name}
+            src={contact.image.url}
+            alt={contact.name}
           />
           <div className="session--speaker-info">
             <AnchorHeader
               level={4}
-              anchor={speaker.name}
+              anchor={contact.name}
               className="session--speaker-name"
             >
-              {speaker.country && (
+              {contact.country && (
                 <span className="session--speaker-country">
                   <ReactCountryFlag
-                    code={speaker.country.code}
+                    code={contact.country.code}
                     styleProps={{ verticalAlign: "top" }}
                     svg
                   />
                 </span>
               )}
-              {speaker.name}
+              {contact.name}
             </AnchorHeader>
-            <div className="session--speaker-about">{speaker.aboutShort}</div>
+            <div className="session--speaker-about">{contact.aboutShort}</div>
             {social && (
               <div className="session--speaker-social">
                 {social.homepage && (

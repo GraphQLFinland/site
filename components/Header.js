@@ -50,9 +50,9 @@ const Header = ({
         </section>
 
         <Session
-          speaker={speaker}
+          contact={speaker}
           sessions={[{ header: "Topic", ...session }]}
-          titles={{ speaker: "Featuring" }}
+          titles={{ contact: "Featuring" }}
         />
         {/*<Interactive
           id="components/Countdown.js"
