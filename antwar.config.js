@@ -47,10 +47,10 @@ module.exports = {
       title: "Speakers",
       speakers: `Who is going to speak at ${EVENT_NAME}?`,
     }),
-    sponsors: page("sponsors", {
-      title: "Sponsors",
-      speakers: `Who are sponsoring ${EVENT_NAME}?`,
-    }),
+    // sponsors: page("sponsors", {
+    //   title: "Sponsors",
+    //   speakers: `Who are sponsoring ${EVENT_NAME}?`,
+    // }),
     workshops: page("workshops", {
       title: "Workshops",
       description: `Which workshops will be held at ${EVENT_NAME}?`,

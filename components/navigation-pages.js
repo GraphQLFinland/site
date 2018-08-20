@@ -69,10 +69,10 @@ export default [
         title: "Speakers",
         url: "/speakers/",
       },
-      {
-        title: "Sponsors",
-        url: "/sponsors/",
-      },
+      // {
+      //   title: "Sponsors",
+      //   url: "/sponsors/",
+      // },
       {
         title: "Organizers",
         url: "/about/",

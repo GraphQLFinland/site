@@ -13,7 +13,6 @@ import {
   Subscribe,
   connect,
 } from "../components";
-import * as tweakSponsors from "./tweak-sponsors";
 
 import "normalize.css/normalize.css";
 import "../styles/fontello-codes.css";
@@ -58,16 +57,16 @@ const SiteBody = (
           {pathname !== "/sponsors/" && (
             <section className="grid grid_6col">
               {/* <div className="grid--full"> */}
-              {/* <div className="sponsors sponsors_gold">
+              {/* <div className="sponsors sponsors_gold">*/}
               <AnchorHeader className="sponsors--heading" level={2}>
                 🥇 Gold Sponsors
               </AnchorHeader>
-              <section className="sponsors--list">
-                <Contacts items={goldSponsors} render={Sponsor} />
-                {goldSponsors.length < 2 && (
-                  <a href="/for-sponsors/">Become a sponsor</a>
-                )}
-              </section>
+              <div className="sponsors sponsors_gold grid--full">
+                <section className="sponsors--list">
+                  <Contacts items={goldSponsors} render={Sponsor} />
+                </section>
+              </div>
+              {/*
             </div>
             <div className="sponsors sponsors_silver">
               <AnchorHeader className="sponsors--heading" level={2}>
@@ -84,10 +83,7 @@ const SiteBody = (
               <AnchorHeader level={2}>🥉 Bronze Sponsors</AnchorHeader>
               <div className="sponsors sponsors_bronze grid--full">
                 <section className="sponsors--list">
-                  <Contacts
-                    items={tweakSponsors.bronze(bronzeSponsors)}
-                    render={Sponsor}
-                  />
+                  <Contacts items={bronzeSponsors} render={Sponsor} />
                 </section>
               </div>
 
