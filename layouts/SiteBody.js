@@ -146,7 +146,7 @@ export default hot(module)(
         }
       }
 
-      contact(contactName: "Adam Miskiewicz", conferenceId: $conferenceId) {
+      contact(contactName: "Kadi Kraman", conferenceId: $conferenceId) {
         name
         about
         aboutShort
