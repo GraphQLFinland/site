@@ -26,7 +26,7 @@ const Header = ({
           <h1 className="logo">
             <img
               src={logo}
-              width={140}
+              width={126}
               height={126}
               alt="GraphQL Finland Logo"
               className="logo--image"
