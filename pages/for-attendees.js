@@ -68,7 +68,7 @@ There's a direct train from the airport to Helsinki center. HSL operates the loc
 
 1. Use the site [schedule](/schedule/).
 2. Use the mobile applications (Android, iPhone).
-3. [Subscribe to the conference calendar](https://api.react-finland.fi/calendar-2018.ics). You can import it to your Google Calendar for example.
+3. [Subscribe to the conference calendar](https://api.react-finland.fi/calendar/graphql-finland). You can import it to your Google Calendar for example.
 
 ## What Should I Know About Finland?
 
