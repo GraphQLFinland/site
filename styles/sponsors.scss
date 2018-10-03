@@ -64,7 +64,7 @@
     .sponsors--logo {
       max-height: 100px;
       max-width: 250px;
-      height: auto;
+      min-height: 100px;
       width: auto;
     }
 
@@ -83,7 +83,7 @@
     .sponsors--logo {
       max-height: 60px;
       max-width: 200px;
-      height: auto;
+      min-height: 60px;
       width: auto;
     }
 
@@ -105,7 +105,7 @@
     .sponsors--logo {
       max-height: 50px;
       max-width: 100px;
-      height: auto;
+      min-height: 50px;
       width: auto;
     }
     // .session--speaker-image {
