@@ -128,9 +128,12 @@ h3 {
   padding: 1em;
   position: relative;
   background-color: white;
+  z-index: 0;
+}
+
+.intro p {
   border-radius: 0.5rem;
   box-shadow: 0 0.05rem $color-accent;
-  z-index: 0;
 }
 
 .main-container table,
