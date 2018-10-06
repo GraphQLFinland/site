@@ -66,19 +66,15 @@ const SiteBody = (
                   <Contacts items={goldSponsors} render={Sponsor} />
                 </section>
               </div>
-              {/*
-            </div>
-            <div className="sponsors sponsors_silver">
-              <AnchorHeader className="sponsors--heading" level={2}>
-                🥈 Silver Sponsors
-              </AnchorHeader>
-              <section className="sponsors--list">
-                <Contacts items={silverSponsors} render={Sponsor} />
-                {silverSponsors.length < 3 && (
-                  <a href="/for-sponsors/">Become a sponsor</a>
-                )}
-              </section>
-            </div> */}
+
+              <div className="sponsors sponsors_silver">
+                <AnchorHeader className="sponsors--heading" level={2}>
+                  🥈 Silver Sponsors
+                </AnchorHeader>
+                <section className="sponsors--list sponsors_silver grid-full">
+                  <Contacts items={silverSponsors} render={Sponsor} />
+                </section>
+              </div>
 
               <AnchorHeader level={2}>🥉 Bronze Sponsors</AnchorHeader>
               <div className="sponsors sponsors_bronze grid--full">
