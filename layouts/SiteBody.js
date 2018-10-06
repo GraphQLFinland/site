@@ -56,8 +56,6 @@ const SiteBody = (
           <section className="grid grid_6col">{children}</section>
           {pathname !== "/sponsors/" && (
             <section className="grid grid_6col">
-              {/* <div className="grid--full"> */}
-              {/* <div className="sponsors sponsors_gold">*/}
               <AnchorHeader className="sponsors--heading" level={2}>
                 🥇 Gold Sponsors
               </AnchorHeader>
@@ -67,11 +65,11 @@ const SiteBody = (
                 </section>
               </div>
 
-              <div className="sponsors sponsors_silver">
-                <AnchorHeader className="sponsors--heading" level={2}>
-                  🥈 Silver Sponsors
-                </AnchorHeader>
-                <section className="sponsors--list sponsors_silver grid-full">
+              <AnchorHeader className="sponsors--heading" level={2}>
+                🥈 Silver Sponsors
+              </AnchorHeader>
+              <div className="sponsors sponsors_silver grid--full">
+                <section className="sponsors--list">
                   <Contacts items={silverSponsors} render={Sponsor} />
                 </section>
               </div>
