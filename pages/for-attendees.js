@@ -1,6 +1,5 @@
 import React from "react";
-import Interactive from "antwar-interactive";
-import { AnchorHeader, Markdown, VenueGallery } from "components";
+import { AnchorHeader, Markdown } from "components";
 
 const ForAttendees = () => (
   <>
@@ -25,37 +24,14 @@ const ForAttendees = () => (
         source={`The conference will be held at [Paasitorni](https://www.paasitorni.fi/en/), a historic building in Siltasaari, near the center of Helsinki. Paasitorni is a gorgeous Art Noveue building that in past served as Worker's House. On 18th, several meeting rooms would be used for the workshops. On 19th, the big congress hall will be the main conference location.`}
       />
     </div>
-    {/* <div className="grid--full">
-      <Interactive id="components/VenueGallery.js" component={VenueGallery} />
-    </div>
-    <AnchorHeader level={3}>The Venue Location</AnchorHeader>
-    <div className="grid--full">
-      <iframe
-        src="https://www.google.com/maps/d/embed?mid=1TtRyfUF_tBBpKPf4MolkhdaN_3HHcG_9"
-        width="100%"
-        height="480"
-        frameBorder="0"
-      />
-      <ul>
-        <li>
-          Blue star - Valkoinen Sali, the main venue and first workshop
-          location. Aleksanterinkatu 16
-        </li>
-        <li>
-          Green heart - Elisa Appelsiini, second workshop location. Kaarlenkatu
-          11
-        </li>
-        <li>Red train - Main railway station</li>
-        <li>Yellow swimmer - Allas Sea Pool</li>
-        <li>Maroon drink - Sea Life Helsinki (afterparty). Tivolikuja 10</li>
-      </ul>
-    </div> */}
     <div className="grid--5col">
       <Markdown
         source={`
 ## How to Get to the Venue?
 
 There's a direct train from the airport to Helsinki center. HSL operates the local public transport system. You can find a city bike system as well. From city center, take a tram or metro to Hakaniemi.
+
+To get to the center for airport, you can use train, Finnair buses or taxi. It seems that nowadays there might be some fake taxis, so use reliable taxi services like TaksiHelsinki, Lahitaksi, Kovanen or FixuTaxi. Note that taxis are very expensive in Helsinki.
 
 ## Where to Stay?
 
