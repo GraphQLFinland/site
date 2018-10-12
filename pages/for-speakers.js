@@ -57,6 +57,8 @@ I'll remind you, but please do sound/equipment check on a break before your talk
 
 Speaker dinner will be held at 18th at Paasi restaurant (http://passiodining.fi/) at 20:00. There will be taxis to take you to the venue from the hotel. The venue is not very far, in the city center, about 20 minutes walk from the hotel. However if it's gonna rain then taxi is probabyl a better choice. Taxis will be waiting for you at around 19:40.
 
+*Please inform us about your dietary restrictions so we can tell the restaurant before hand*.
+
 ## What Should I Know About Finland?
 
 * We speak Finnish, English, and Swedish (poorly most often). [Check out our brief guide to Finnish](https://medium.com/react-finland/brief-guide-to-finnish-7f43f37d5017) in order to surprise the locals.
