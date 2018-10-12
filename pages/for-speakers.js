@@ -31,9 +31,11 @@ const ForSpeakers = () => (
 
 We booked you all at [Scandic Paasi](https://www.scandichotels.com/hotels/finland/helsinki/scandic-paasi?cmpid=ppc_BH2nd&gclid=Cj0KCQjw6fvdBRCbARIsABGZ-vR4KRNmrnasn45hHa-ekzL1kAtPWXVo_gfnkVIq2Ah-dsZT7IuFyk4aArTkEALw_wcB). You are booked for your whole stay (for the time discussed with each of your individually). There is breakfast. In case you were one of the sponsors, who agreed to pay for their expenses, you'd need to pay for the hotel at checkout, otherwise we've paid for the hotel already and you don't need to do anything.
 
-## How to Get to the Venue?
+## How to Get to the hotel?
 
-TODO
+If you want to use public transport, we recommend train or Finnair bus to railway station. From there you need to take tram 9 to Hakaniemi.
+
+Alternatively, you can take a taxi. Save the receipt so we can reimburse you. There are several taxis in the airport, take reputable one like Taksi Helsinki. Note that it's not cheap, expect 50 euros.
 
 ## Workshops
 
@@ -53,9 +55,7 @@ I'll remind you, but please do sound/equipment check on a break before your talk
 
 # Speakers dinner
 
-TODO
-
-Speaker dinner will be held at 18th at Paasi restaurant at XXX. There will be taxis to take you to the venue from the hotel.
+Speaker dinner will be held at 18th at Paasi restaurant (http://passiodining.fi/) at 20:00. There will be taxis to take you to the venue from the hotel. The venue is not very far, in the city center, about 20 minutes walk from the hotel. However if it's gonna rain then taxi is probabyl a better choice. Taxis will be waiting for you at around 19:40.
 
 ## What Should I Know About Finland?
 
