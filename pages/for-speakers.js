@@ -51,7 +51,9 @@ Workshop hosts, I'll send you list of your attendees so you can email them with 
 
 ## Talks
 
-I'll remind you, but please do sound/equipment check on a break before your talk. Lightning talks are 15 mins, normal talks are 30 mins. We have pretty tight schedule, so it's totally okay to have shorter talk, but please try to not have them longer. There won't be Q&A during the talks nor a panel at the end. However, we want to do a Q&A thingie that will happen after the talk. So on the next break after talk, I wonder if you could come to an informal Q&A session at the entrance foyer (I'll remind you about that too).
+I'll remind you, but please do sound/equipment check on a break before your talk. Lightning talks are 15 mins, normal talks are 30 mins. We have pretty tight schedule, so it's totally okay to have shorter talk, but please try to not have them longer.
+
+There won't be Q&A during the talks nor a panel at the end. However, we want to do a Q&A thingie that will happen after the talk. So on the next break after talk, I wonder if you could come to an informal Q&A session at the entrance foyer (I'll remind you about that too).
 
 # Speakers dinner
 
