@@ -41,13 +41,13 @@ Alternatively, you can take a taxi. Save the receipt so we can reimburse you. Th
 
 The workshops will also be held at Paasitorni, but in smaller rooms. There will be lunch and two breaks with some pastries during the workshop day, so make sure to have breaks at that time. Breaks will be held at the restaurant an it will be an additional opportunity to mingle between the workshop participant. The schedule for the workshops is:
 
-* 08:00-09:00 registration
-* 11:30-12:30 Lunch break at the restaurant
+* 08:00-09:00 - Registration
+* 11:30-12:30 - Lunch break at the restaurant
 * 14:00-14:20 - First break at the restaurant
 * 15:40-16:00 - Second break at the restaurant
-* 17:30- workshops end.
+* 17:30 - Workshops end
 
-Workshop hosts, I'll send you list of your attendees so you can email them with more info eg about required pre-installation steps.
+Workshop hosts, I'll send you list of your attendees so you can email them with more info e.g. about required pre-installation steps.
 
 ## Talks
 
