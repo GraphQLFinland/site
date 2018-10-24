@@ -43,10 +43,18 @@ export default [
     },
     links: [
       {
+        title: "React Finland",
+        url: "https://react-finland.fi/",
+      },
+      {
         title: "Intro",
         url: "/",
       },
       {
+        title: "Organizers",
+        url: "/about/",
+      },
+      /*{
         title: "Schedule",
         url: "/schedule/",
       },
@@ -57,7 +65,7 @@ export default [
       {
         title: "Tickets",
         url: "/#tickets",
-      },
+      },*/
     ],
   },
   {
@@ -65,18 +73,18 @@ export default [
       className: "nav--secondary",
     },
     links: [
-      {
+      /*{
         title: "Speakers",
         url: "/speakers/",
-      },
+      },*/
       // {
       //   title: "Sponsors",
       //   url: "/sponsors/",
       // },
-      {
+      /*{
         title: "Organizers",
         url: "/about/",
-      },
+      },*/
     ],
   },
   {
@@ -91,6 +99,10 @@ export default [
       {
         title: "For Sponsors",
         url: "/for-sponsors/",
+      },
+      {
+        title: "2018 ",
+        url: "/2018/",
       },
     ],
   },

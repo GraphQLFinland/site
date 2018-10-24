@@ -31,6 +31,10 @@ module.exports = {
       title: "Imprint",
       description: `How to reach ${EVENT_NAME} organizers?`,
     }),
+    // sponsors: page("sponsors", {
+    //   title: "Sponsors",
+    //   speakers: `Who are sponsoring ${EVENT_NAME}?`,
+    // }),
     "privacy-policy": page("privacy-policy", {
       title: "Privacy Policy",
       description: `What is the privacy policy of ${EVENT_NAME}?`,
@@ -47,19 +51,19 @@ module.exports = {
       title: "For Sponsors",
       description: `What should I know as a ${EVENT_NAME} sponsor?`,
     }),
-    speakers: page("speakers", {
+    "2018": page("2018", {
+      description: "GraphQL Finland 2018",
+      title: "GraphQL Finland 2018",
+    }),
+    "2018/speakers": page("speakers", {
       title: "Speakers",
       speakers: `Who is going to speak at ${EVENT_NAME}?`,
     }),
-    // sponsors: page("sponsors", {
-    //   title: "Sponsors",
-    //   speakers: `Who are sponsoring ${EVENT_NAME}?`,
-    // }),
-    workshops: page("workshops", {
+    "2018/workshops": page("workshops", {
       title: "Workshops",
       description: `Which workshops will be held at ${EVENT_NAME}?`,
     }),
-    schedule: page("schedule", {
+    "2018/schedule": page("schedule", {
       title: "Schedule",
       description: `What is the schedule of ${EVENT_NAME}?`,
     }),
