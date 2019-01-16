@@ -75,24 +75,24 @@ const sponsorFragment = `
     image {
       url
     }
-    }
+  }
   `;
 
 export default connect(`
   query RootQuery($conferenceId: ID!) {
-      conference(id: $conferenceId) {
+    conference(id: $conferenceId) {
       partners {
-    ...SponsorFragment
-  }
+        ...SponsorFragment
+      }
       goldSponsors {
-      ...SponsorFragment
-    }
-    silverSponsors {
-      ...SponsorFragment
-    }
-    bronzeSponsors {
-      ...SponsorFragment
-    }
+        ...SponsorFragment
+      }
+      silverSponsors {
+        ...SponsorFragment
+      }
+      bronzeSponsors {
+        ...SponsorFragment
+      }
     }
   }
 
