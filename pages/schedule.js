@@ -49,10 +49,6 @@ export default connect(`
           end
           sessions {
             type
-            interval {
-              begin
-              end
-            }
             title
             description
 
