@@ -13,7 +13,7 @@ export default connect(`
   query PageQuery($conferenceId: ID!) {
     conference(id: $conferenceId) {
       workshops {
-        speakers {
+        people {
           name
           about
           aboutShort
@@ -33,10 +33,6 @@ export default connect(`
           name
           address
           city
-        }
-        tickets {
-          name
-          link
         }
       }
     }

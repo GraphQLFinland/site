@@ -51,21 +51,10 @@ export default connect(`
             type
             title
             description
-
-            ... on Workshop {
-              speakers {
-                name
-                image {
-                  url
-                }
-              }
-            }
-            ... on Talk {
-              speakers {
-                name
-                image {
-                  url
-                }
+            people {
+              name
+              image {
+                url
               }
             }
           }

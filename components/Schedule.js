@@ -14,21 +14,21 @@ const Schedule = ({ intervals }) => (
         {begin}–{end}
       </dt>,
       <dd className="schedule--definition" key={`dd-${i}`}>
-        {sessions.map(({ title, type, description, speakers, keywords }, i) => (
+        {sessions.map(({ title, type, description, people, keywords }, i) => (
           <div className="session" key={`session-${i}`}>
             {type === "WORKSHOP" ? (
               <WorkshopTitle
                 key={i}
                 title={title}
                 type={type}
-                speakers={speakers}
+                speakers={people}
               />
             ) : (
               <AnchorTitle
                 key={i}
                 title={title}
                 type={type}
-                speakers={speakers}
+                speakers={people}
               />
             )}
             {type !== "WORKSHOP" &&
@@ -58,7 +58,7 @@ function getType(sessions) {
 const titlePropTypes = {
   title: PropTypes.string,
   type: PropTypes.string,
-  speakers: PropTypes.array,
+  people: PropTypes.array,
 };
 
 const WorkshopTitle = ({ title, type, speakers }) => (

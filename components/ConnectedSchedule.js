@@ -23,7 +23,7 @@ export default connect(
             title
             description
             type
-            speakers {
+            people {
               name
               image {
                 url
