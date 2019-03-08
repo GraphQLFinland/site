@@ -96,10 +96,10 @@ export default [
         title: "For Attendees",
         url: "/for-attendees/",
       },
-      {
+      /*{
         title: "For Sponsors",
         url: "/for-sponsors/",
-      },
+      },*/
       {
         title: "2018 ",
         url: "/2018/",
