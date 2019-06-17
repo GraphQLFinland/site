@@ -43,8 +43,8 @@ const Header = ({
       </div>
       <div className="header--container container grid grid_6col">
         <section className="header--dates">
-          <time dateTime="2018-10-18/2018-10-19" className="header--date">
-            October/November, 2019
+          <time dateTime="2020-10-18" className="header--date">
+            2020?
           </time>
           <address className="header--location">Helsinki, Finland</address>
         </section>
