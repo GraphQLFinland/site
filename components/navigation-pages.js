@@ -43,10 +43,6 @@ export default [
     },
     links: [
       {
-        title: "React Finland",
-        url: "https://react-finland.fi/",
-      },
-      {
         title: "Intro",
         url: "/",
       },
@@ -54,6 +50,14 @@ export default [
         title: "Organizers",
         url: "/about/",
       },
+      {
+        title: "React Finland",
+        url: "https://react-finland.fi/",
+      }
+      {
+        title: "Freezing Edge",
+        url: "https://freezing-edge.fi/",
+      }
       /*{
         title: "Schedule",
         url: "/schedule/",
